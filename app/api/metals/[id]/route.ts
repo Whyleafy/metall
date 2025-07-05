@@ -1,30 +1,34 @@
 import { prisma } from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
+import type { NextRequest as NextJsRequest } from "next/server";
 
-export async function PUT(req: NextRequest, context: { params: { id: string } }) {
+type Context = {
+  params: {
+    id: string;
+  };
+};
+
+export async function PUT(req: NextJsRequest, { params }: Context) {
   try {
-    const { params } = context;
     const body = await req.json();
     const { name, cashPrice, nonCashPrice } = body;
 
-    const updatedMetal = await prisma.metal.update({
+    const updateMetal = await prisma.metal.update({
       where: { id: params.id },
       data: { name, cashPrice, nonCashPrice },
     });
 
-    return NextResponse.json(updatedMetal);
+    return NextResponse.json(updateMetal);
   } catch (error) {
     console.error("PUT error:", error);
     return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }
 
-export async function DELETE(_req: NextRequest, context: { params: { id: string } }) {
+export async function DELETE(_req: NextJsRequest, { params }: Context) {
   try {
-    const { id } = context.params;
-
     await prisma.metal.delete({
-      where: { id },
+      where: { id: params.id },
     });
 
     return NextResponse.json({ message: "Deleted" });
