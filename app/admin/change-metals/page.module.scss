@@ -1,8 +1,15 @@
 .container {
 	padding: 2rem 1rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	text-align: center;
+	
+	&__button {
+		margin-bottom: 1rem;
+	}
+	
+	&__backup {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+	}
 }
