@@ -1,8 +1,8 @@
 export interface Metal {
 	id: string;
 	name: string;
-	cashPrice: number | null;
-	nonCashPrice: number | null;
+	cashPrice: number;
+	nonCashPrice: number;
 	updatedAt: Date;
 }
 

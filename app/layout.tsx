@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.scss";
 import { Footer, Header } from "@/components";
+import { Toaster } from 'react-hot-toast';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={`${inter.variable}`}>
 		<Header />
         	{children}
+			 <Toaster position="top-center" reverseOrder={false} /> {/* вот это обязательно */}
 		<Footer />
       </body>
     </html>

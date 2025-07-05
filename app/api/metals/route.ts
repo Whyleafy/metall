@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/prisma";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 
 export async function GET() {
@@ -12,5 +12,20 @@ export async function GET() {
 	} catch (error) {
 		console.error("Error fetching metals:", error);
    		return NextResponse.json({ error: "Server error" }, { status: 500 });
+	}
+};
+
+export async function POST(req: NextRequest) {
+	try {
+		const body = await req.json();
+		const { name, cashPrice, nonCashPrice} = body;
+		const newMetal = await prisma.metal.create({
+			data: { name, cashPrice, nonCashPrice }
+		});
+		
+		return NextResponse.json(newMetal)
+	} catch (error) {
+		console.error("Error creating metal:", error);
+    	return NextResponse.json({ error: "Server error" }, { status: 500 });
 	}
 }
