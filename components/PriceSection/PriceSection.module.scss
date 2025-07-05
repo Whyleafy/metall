@@ -1,0 +1,17 @@
+@use "../../app/styles/colors.scss";
+
+.section {
+	background-color: #f9fafb;
+	min-height: 60svh;
+	padding: 4rem 1rem;
+	text-align: center;
+	
+	&__title {
+		margin-bottom: 1rem;
+	}
+	
+	&__p {
+		margin-bottom: 2.5rem;
+		color: colors.$color-gray
+	}
+}

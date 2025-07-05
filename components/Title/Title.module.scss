@@ -1,0 +1,23 @@
+@use "../../app/styles/colors.scss";
+
+.h1 {
+	font-size: 3.75rem;
+	line-height: 3rem;
+}
+
+.h2 {
+	font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.h3 {
+	
+}
+
+.black {
+	color: colors.$color-black;
+}
+
+.white {
+	color: colors.$color-white;
+}

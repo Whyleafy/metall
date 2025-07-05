@@ -1,0 +1,78 @@
+@use "../../app/styles/colors.scss";
+
+.section {
+	padding: 4rem 1rem;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	
+	&__text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		
+		&__title {
+			margin-bottom: 1rem;
+		}
+		
+		&__p {
+			margin-bottom: 3rem;
+			color: colors.$color-gray
+		}
+	}
+	
+	&__steps {
+		display: grid;
+		gap: 2rem;
+		
+		@media (min-width: 768px) {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+	}
+	
+	@media (max-width: 768px) {
+        padding: 2rem 0.7rem;
+    }
+}
+
+.step {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	
+	&__iconBackground {
+		width: 5rem;
+		height: 5rem;
+		background-color: #fee2e2;
+		border-radius: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 1.5rem;
+	}
+	
+	&__icon {
+		width: 2.5rem;
+		height: 2.5rem;
+		color: colors.$color-red;
+	}
+	
+	&__title {
+		margin-bottom: 1rem;
+	}
+	
+	&__p {
+		color: colors.$color-black;
+		
+	}
+	
+	&__index {
+		margin-top: 1.5rem;
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: colors.$color-red-hover
+	}
+}

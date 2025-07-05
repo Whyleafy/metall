@@ -1,0 +1,69 @@
+@use "../../app/styles/colors.scss";
+
+.calculator {
+  max-width: 28rem;
+  width: 100%;
+  background-color: colors.$color-white-hover;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 0 auto;
+}
+
+.calculator__text {
+  display: flex;
+  gap: 0.5rem;
+  color: colors.$color-red;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: colors.$color-black;
+}
+
+.select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  background-color: colors.$color-white;
+  font-size: 1rem;
+  color: colors.$color-gray;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: colors.$color-gray;
+  background-color: colors.$color-white;;
+}
+
+.result {
+  background-color: #F0FDF4;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.4;
+
+  &__price {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #16A349;
+    margin: 0.25rem 0;
+  }
+
+  &__note {
+    font-size: 0.875rem;
+    color: #666;
+  }
+}

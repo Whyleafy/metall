@@ -1,0 +1,18 @@
+export { Header } from './Header/Header';
+export { Nav } from './Nav/Nav';
+export { Logo } from './Logo/Logo';
+export { Title } from './Title/Title';
+export { HeroSection } from './HeroSection/HeroSection';
+export { Button } from './Button/Button';
+export { StepsSection } from './StepsSection/StepsSection';
+export { PriceSection } from './PriceSection/PriceSection';
+export { Calculator } from './Calculator/Calculator';
+export { CalculatorSection } from './CalculatorSection/CalculatorSection';
+export { YandexSection } from './YandexSection/YandexSection';
+export { YandexMap } from './YandexMap/YandexMap';
+export { ContactSection } from './ContactSection/ContactSection';
+export { Footer } from './Footer/Footer';
+export { MiniArticle } from './MiniArticle/MiniArticle';
+export { ArticleSection } from './ArticleSection/ArticleSection';
+export { MetalTable } from './MetalTable/MetalTable';
+

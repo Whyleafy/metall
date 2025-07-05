@@ -1,0 +1,61 @@
+@use "../../app/styles/colors.scss";
+
+.section {
+	background-color: #f9fafb;
+	padding: 4rem 1rem;
+
+	&__container {
+		margin: 0 auto;
+		max-width: 1200px;
+		padding: 0 1rem;
+	}
+
+	&__title {
+		font-size: 2rem;
+		font-weight: 700;
+		text-align: center;
+		color: #1f2937;
+		margin-bottom: 3rem;
+	}
+
+	&__grid {
+		display: grid;
+		gap: 2rem;
+		align-items: center;
+
+		@media (min-width: 768px) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
+
+.info {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	&__text {
+		display: flex;
+		gap: 1rem;
+		
+		a {
+			color: colors.$color-black;
+			
+			&:hover {
+				color: colors.$color-red;
+			}
+		}
+
+		&__icon {
+			color: colors.$color-red;
+			width: 1.5rem;
+			height: 1.5rem;
+			margin-top: 0.25rem;
+		}
+	}
+}
+
+.title {
+	margin-bottom: 0.5rem;
+}

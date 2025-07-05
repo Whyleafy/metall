@@ -1,0 +1,76 @@
+@use "../../app/styles/colors.scss" as *;
+
+.table {
+  background-color: #fff;
+  border-radius: 0.5rem; 
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -4px rgba(0, 0, 0, 0.1); 
+  overflow: hidden;
+  width: 100%;
+  text-align: start;
+}
+
+.table__row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  background-color: $color-red; 
+  color: $color-white;   
+  padding: 1.25rem 1rem;
+  font-weight: 600;
+}
+
+.heading {
+  overflow: hidden;
+
+}
+
+.metalRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem; 
+  padding: 1rem; 
+  border-top: 1px solid #e5e7eb; 
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #f3f4f6; 
+  }
+
+  &__column {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #1f2937; 
+    font-weight: 600;
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      color: $color-red; 
+      font-weight: 600;
+    }
+
+    &:nth-child(4) {
+      color: #6b7280; 
+      font-weight: 400;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .table__row,
+  .metalRow {
+    gap: 0.75rem;
+    padding: 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  .metalRow__column {
+    font-size: 0.68rem;
+	font-weight: 600;
+  }
+  
+  .heading {
+	font-size: 0.75rem;
+  }
+}

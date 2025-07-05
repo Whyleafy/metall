@@ -1,0 +1,58 @@
+@use "../../app/styles/colors.scss";
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.75rem 1.4rem;
+	border-radius: 0.8rem;
+	border: none;
+	transition: all 0.3s;
+	font-weight: 500;
+	
+	&__red {
+		background-color: colors.$color-red;
+		color: colors.$color-white;
+		
+		&:hover {
+			background-color: colors.$color-red-hover;
+		}
+	}
+	
+	&__white {
+		background-color: colors.$color-white;
+		color: colors.$color-red;
+		
+		&:hover {
+			background-color: colors.$color-white-hover;
+		}
+	}
+	
+	&__green {
+		background-color: colors.$color-green;
+		color: colors.$color-white;
+		
+		&:hover {
+			background-color: colors.$color-green-hover;
+		}
+	}
+	
+	&__blue {
+		background-color: colors.$color-blue;
+		color: colors.$color-white;
+		
+		&:hover {
+			background-color: colors.$color-blue-hover;
+		}
+	}
+	
+	&__outline {
+		background: none;
+		color: colors.$color-red;
+		border: 1px solid colors.$color-red;
+		
+		&:hover {
+			background-color: colors.$color-white-hover;
+		}
+	}
+}
