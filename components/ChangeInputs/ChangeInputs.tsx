@@ -65,14 +65,15 @@ export const ChangeInputs: React.FC<Props> = ({ className }) => {
 	
 	const handleDelete = async () => {
 	if (!selectedId) return;
+	const confirm = window.confirm("Вы уверены, что хотите удалить металл?");
+	if (!confirm) return;
 
 	const res = await fetch(`/api/metals/${selectedId}`, {
 		method: "DELETE",
 	});
-	const confirm = window.confirm("Вы уверены, что хотите удалить металл?");
 	
 
-	if (res.ok && confirm) {
+	if (res.ok) {
 		toast.error("Металл успешно удалён");
 
 		setMetals((prev) => prev.filter((m) => m.id !== selectedId));
