@@ -5,6 +5,9 @@
 	min-height: 60svh;
 	padding: 4rem 1.5rem;
 	text-align: center;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
 	
 	&__title {
 		margin-bottom: 1rem;
@@ -17,6 +20,7 @@
 	
 	@media (max-width: 768px) {
 		padding: 3rem 1rem;
-		
+		background-size: 50px auto;
 	}
 }
+
