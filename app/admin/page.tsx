@@ -13,6 +13,7 @@ export default function Admin() {
 	const [nonCashPrice, setNonCashPrice] = useState<string>('');
 	const [name, setName] = useState<string>("");
 	
+	
 		useEffect(() => {
 			const fetchmetals = async () => {
 			try {
@@ -42,11 +43,15 @@ export default function Admin() {
 			
 			if (res.ok) {
 				toast.success("Металл создан!");
+				setName('');
+  				setCashPrice('');
+  				setNonCashPrice('');
 				setModalActive(false);
 			} else {
 				toast.error("Ошибка при создании");
 			}
 		}
+		
 
 	return (
 		<div className={styles.dashboard}>

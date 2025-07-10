@@ -18,4 +18,5 @@ export { MetalTable } from './MetalTable/MetalTable';
 export { ChangeInputs } from './ChangeInputs/ChangeInputs';
 export { Modal } from './Modal/Modal';
 export { ReviewSection } from './ReviewSection/ReviewSection';
+export { Review } from './Review/Review';
 

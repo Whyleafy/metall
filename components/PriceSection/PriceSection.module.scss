@@ -3,7 +3,7 @@
 .section {
 	background-color: #f9fafb;
 	min-height: 60svh;
-	padding: 4rem 1rem;
+	padding: 4rem 1.5rem;
 	text-align: center;
 	
 	&__title {
@@ -13,5 +13,10 @@
 	&__p {
 		margin-bottom: 2.5rem;
 		color: colors.$color-gray
+	}
+	
+	@media (max-width: 768px) {
+		padding: 3rem 1rem;
+		
 	}
 }
