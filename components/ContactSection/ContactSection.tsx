@@ -22,11 +22,11 @@ export const ContactSection = () => {
 				<p className={styles.socials__p}>Или свяжитесь с нами в мессенджерах:</p>
 				<div className={styles.socials__buttons}>
 					<Button variant='green' className={styles.socials__button}>
-						<Send className={styles.buttonIcon}/>
+						<img src="/whatsapp-logo.svg" className={styles.buttonIcon}/>
 						WhatsApp
 					</Button>
 					<Button variant='blue' className={styles.socials__button}>
-						<Send className={styles.buttonIcon}/> 
+						<img src="/telegram-logo.svg" className={styles.buttonIcon}/> 
 						Telegram
 					</Button>
 				</div>

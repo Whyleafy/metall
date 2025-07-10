@@ -37,13 +37,25 @@
 
 .title {
 	display: flex;
-	// align-items: center;
 	gap: 0.5rem;
 
 	&__text {
 		font-size: 1.15rem;
 		margin-bottom: 1rem;
 		font-weight: 600;
+	}
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+
+	&__text {
+		font-size: 1.15rem;
+		margin-bottom: 0rem;
+		font-weight: 600;
+		line-height: 1;
 	}
 }
 

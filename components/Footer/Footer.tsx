@@ -9,9 +9,9 @@ export const Footer = () => {
 			<div className={styles.footer__grid}>
 				{/* Логотип и описание */}
 				<div className={styles.footer__grid__column}>
-					<div className={styles.title}>
+					<div className={styles.logo}>
 						<Logo />
-						<p className={styles.title__text}>МеталлПрием</p>
+						<p className={styles.logo__text}>МеталлПрием</p>
 					</div>
 					<p className={styles.columnText}>
 						Надежный прием металлолома в городе. Честные цены, быстрая оценка, удобная оплата.
