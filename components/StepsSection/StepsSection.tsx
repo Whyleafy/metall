@@ -41,8 +41,8 @@ export const StepsSection: React.FC<Props> = ({ className }) => {
 							<step.icon className={styles.step__icon}/>
 						</div>
 						<div className={styles.step__text}>
-							<Title tag='h3' color='black' className={styles.step__title}>{step.title}</Title>
-							<p className={styles.step__p}>{step.description}</p>
+							<Title tag='h3' color='black' className={styles.step__text__title}>{step.title}</Title>
+							<p className={styles.step__text__p}>{step.description}</p>
 						</div>
 					</div>
           		))}

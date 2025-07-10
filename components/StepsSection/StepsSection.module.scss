@@ -80,6 +80,13 @@
 			color: colors.$color-black;
 			
 		}
+		
+		@media (max-width: 768px) {
+			gap: 0.5rem;
+			&__p {
+				font-size: 1.05rem;
+			}
+    	}
 	}
 	
 
