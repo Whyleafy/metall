@@ -9,6 +9,28 @@
 	padding-inline: 2rem ;
 	height: 4rem;
 	
+	&__link {
+		display: flex;
+		align-items: center;
+		color: colors.$color-black;
+		font-size: 1.15rem;
+		font-weight: 600;
+		gap: 1rem;
+		
+		&__article {
+			transition: all 0.3s;
+			
+			@media (max-width: 480px) {
+				display: none;
+			}
+			
+			&:hover {
+				color: colors.$color-red;
+			}
+		}
+
+	}
+	
 	&__phone {
 		display: flex;
 		align-items: center;
@@ -30,4 +52,5 @@
 			}
 		}
 	}
+	
 }

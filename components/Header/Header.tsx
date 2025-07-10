@@ -8,7 +8,10 @@ import Link from 'next/link';
 export const Header = ( ) => {
 	return (
 		<header className={styles.header}>
-			<Link href="/" className={styles.nav__link}><Logo /> Стальной двор</Link>
+			<Link href="/" className={styles.header__link}>
+				<Logo /> 
+				<p className={styles.header__link__article}>Стальной двор</p>
+			</Link>
 			<Nav />
 			<div className={styles.header__phone}>
 				<Phone className={styles.header__phone__icon}/> 
