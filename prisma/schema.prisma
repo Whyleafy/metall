@@ -16,6 +16,7 @@ model Metal {
 	cashPrice Float?
 	nonCashPrice Float?
 	updatedAt DateTime @updatedAt
+	categories CategoryOnMetal[] 
 }
 
 model Admin {
@@ -32,4 +33,21 @@ model Article {
 	slug String
 	createdAt DateTime @default(now())
   	updatedAt DateTime @updatedAt
+}
+
+model Category {
+	id String @id @default(cuid())
+	name String
+	metals CategoryOnMetal[] 
+}
+
+model CategoryOnMetal {
+	metalId    String
+  	categoryId String
+  	assignedAt DateTime @default(now())
+
+  	metal    Metal    @relation(fields: [metalId], references: [id])
+  	category Category @relation(fields: [categoryId], references: [id])
+
+  	@@id([metalId, categoryId])
 }

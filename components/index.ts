@@ -16,7 +16,8 @@ export { MiniArticle } from './MiniArticle/MiniArticle';
 export { ArticleSection } from './ArticleSection/ArticleSection';
 export { MetalTable } from './MetalTable/MetalTable';
 export { ChangeInputs } from './ChangeInputs/ChangeInputs';
-export { Modal } from './Modal/Modal';
+export { Modal } from './Modals/Modal/Modal';
+export { CreateMetallModal } from './Modals/CreateMetallModal/CreateMetallModal';
 export { ReviewSection } from './ReviewSection/ReviewSection';
 export { Review } from './Review/Review';
 

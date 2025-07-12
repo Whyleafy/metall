@@ -14,6 +14,11 @@
 		
 		&__title {
 			margin-bottom: 1rem;
+			font-size: 3rem;
+			
+			@media (max-width: 768px) {
+        		font-size: 2rem;
+    		}
 		}
 		
 		&__p {
@@ -34,6 +39,7 @@
 	
 	@media (max-width: 768px) {
         padding: 2rem 2rem;
+		
     }
 }
 
@@ -50,34 +56,35 @@
 	
 	
 	&__iconBackground {
-		width: 5rem;
-		height: 5rem;
+		width: 6rem;
+		height: 6rem;
 		background-color: #fee2e2;
-		border-radius: 40px;
+		border-radius: 50px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 	}
 	
 	&__icon {
-		width: 2.5rem;
-		height: 2.5rem;
+		width: 3rem;
+		height: 3rem;
 		color: colors.$color-red;
 	}
 	
 	&__text {
 		
-		gap: 1rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		&__title {
 			margin-bottom: 0.5rem;
+			font-size: 1.5rem;
 		}
 	
 		&__p {
 			color: colors.$color-black;
+			font-size: 1.115rem;
 			
 		}
 		

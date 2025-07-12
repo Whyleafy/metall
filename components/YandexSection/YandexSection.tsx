@@ -31,7 +31,7 @@ export const YandexSection: React.FC<Props> = ({ className }) => {
 								<Title tag="h3" color="black" className={styles.title}>
 									Основной пункт приёма
 								</Title>
-								<p>Г. Пущино, Московская область, ул. Грузовая</p>
+								<p>Г. Пущино, Московская область, ул. Грузовая, д. 4</p>
 							</div>
 						</div>
 						<div className={styles.info__text}>

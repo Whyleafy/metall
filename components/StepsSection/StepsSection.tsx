@@ -13,7 +13,7 @@ export const StepsSection: React.FC<Props> = ({ className }) => {
     {
       icon: Truck,
       title: "Привозите металл",
-      description: "Привозите металл на наш пункт приема"
+      description: "Привозите металлалом на наш пункт приема"
     },
     {
       icon: Scale,
@@ -31,7 +31,7 @@ export const StepsSection: React.FC<Props> = ({ className }) => {
 	return (
 		<section className={styles.section}>
 			<div className={styles.section__text}>
-				<Title color='black' tag='h2' className={styles.section__text__title}>Как мы работаем?</Title>
+				<Title color='black' tag='h1' className={styles.section__text__title}>Как мы работаем?</Title>
 				<p className={styles.section__text__p}>Простой и прозрачный процесс в три шага</p>
 			</div>
 			<div className={styles.section__steps}>
@@ -41,7 +41,7 @@ export const StepsSection: React.FC<Props> = ({ className }) => {
 							<step.icon className={styles.step__icon}/>
 						</div>
 						<div className={styles.step__text}>
-							<Title tag='h3' color='black' className={styles.step__text__title}>{step.title}</Title>
+							<Title tag='h2' color='black' className={styles.step__text__title}>{step.title}</Title>
 							<p className={styles.step__text__p}>{step.description}</p>
 						</div>
 					</div>
