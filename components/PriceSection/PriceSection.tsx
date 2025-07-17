@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from "./PriceSection.module.scss"
 import { MetalTable, Title } from "@/components";
+import useMetalsByCategory from '@/Hooks/useMetalsByCategory';
 
 
 interface Props {
@@ -11,24 +12,7 @@ interface Props {
 }
 
 export  const PriceSection: React.FC<Props> =  ({ className }) => {
-	const [metals, setMetals] = useState([]);
-	
-	useEffect(() => {
-		const fetchmetals = async () => {
-			try {
-				const response = await fetch("api/metals");
-				
-				if (!response.ok) {
-          			throw new Error("Ошибка при получении данных");
-        		}
-				const data = await response.json();
-				setMetals(data);
-			} catch (error) {
-				console.log(error)
-			}
-		};
-		fetchmetals();
-	}, [])
+	const metals = useMetalsByCategory("cmd0lpln400058z9t4487mk4n")
 	
 	return (
 		<section className={styles.section}>

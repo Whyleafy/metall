@@ -18,9 +18,13 @@ export async function GET() {
 export async function POST(req: NextRequest) {
 	try {
 		const body = await req.json();
-		const { name, cashPrice, nonCashPrice} = body;
+		const { name, cashPrice, nonCashPrice, categoryId} = body;
 		const newMetal = await prisma.metal.create({
-			data: { name, cashPrice, nonCashPrice }
+			data: { name, cashPrice, nonCashPrice,
+				categories: {
+					create: [{category: {connect: {id: categoryId}}}]
+				}
+			 }
 		});
 		
 		return NextResponse.json(newMetal)

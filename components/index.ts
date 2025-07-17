@@ -20,4 +20,7 @@ export { Modal } from './Modals/Modal/Modal';
 export { CreateMetallModal } from './Modals/CreateMetallModal/CreateMetallModal';
 export { ReviewSection } from './ReviewSection/ReviewSection';
 export { Review } from './Review/Review';
+export { Input } from './Input/Input';
+export { Select } from './Select/Select';
+export { CategoryWithMetals } from './CategoryWithMetals/CategoryWithMetals';
 

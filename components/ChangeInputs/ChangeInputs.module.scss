@@ -2,49 +2,30 @@
 
 .dashboard {
 	min-width: 15rem;
-	min-height: 50vh;
 	padding: 1rem 1rem;
 	background-color: colors.$color-white;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	
-	&__select {
-		margin-bottom: 2rem;
-		width: 100%;
-		padding: 0.75rem;
-		border: 1px solid #e0e0e0;
-		border-radius: 0.5rem;
-		background-color: colors.$color-white;
-		font-size: 1rem;
-		color: colors.$color-gray;
-		transition: all 0.2s;
-		
-		&:hover {
-			background-color: colors.$color-white-hover;
-		}
-	}
+	margin-bottom: 1rem;
 	
 }
 
 .inputs {
 	display: grid;
-	gap: 3rem;
+	gap: 2rem;
 	
-	&__label {
-		display: flex;
-		flex-direction: column;
-		align-items: start;
+	&__buttons {
+		display: grid;
 		gap: 1rem;
 		
-		&__input {
-			padding: 0.75rem;
-			width: 100%;
-			border: 1px solid #e0e0e0;
-			border-radius: 0.5rem;
-			font-size: 1rem;
-			color: colors.$color-gray;
-			background-color: colors.$color-white;
+		@media (min-width: 768px) {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 	}
+}
+
+.none {
+	display: none;
+	width: 0rem;
 }

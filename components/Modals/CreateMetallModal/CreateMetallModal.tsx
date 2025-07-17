@@ -7,9 +7,10 @@ import toast from "react-hot-toast";
 interface Props {
 	isActive: boolean;
 	setActive: (value: boolean) => void;
+	categoryId: string;
 }
 
-export const CreateMetallModal: FC<Props> = ({ isActive, setActive }) => {
+export const CreateMetallModal: FC<Props> = ({ isActive, setActive, categoryId }) => {
 	const [name, setName] = useState("");
 	const [cashPrice, setCashPrice] = useState('');
 	const [nonCashPrice, setNonCashPrice] = useState('');
@@ -21,7 +22,8 @@ export const CreateMetallModal: FC<Props> = ({ isActive, setActive }) => {
 			body: JSON.stringify({
 				name,
 				cashPrice: Number(cashPrice),
-				nonCashPrice: Number(nonCashPrice)
+				nonCashPrice: Number(nonCashPrice),
+				categoryId
 			})
 		});
 

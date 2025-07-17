@@ -1,0 +1,17 @@
+@use "../../app/styles/colors.scss";
+
+.select {
+		margin-bottom: 2rem;
+		width: 100%;
+		padding: 0.75rem;
+		border: 1px solid #e0e0e0;
+		border-radius: 0.5rem;
+		background-color: colors.$color-white;
+		font-size: 1rem;
+		color: colors.$color-gray;
+		transition: all 0.2s;
+		
+		&:hover {
+			background-color: colors.$color-white-hover;
+		}
+}

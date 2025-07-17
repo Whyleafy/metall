@@ -1,0 +1,16 @@
+@use "../../app/styles/colors.scss";
+
+.table {
+	width: 100%;
+	display: flex;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	align-items: center;
+	flex-direction: column;
+	border-top: 2px solid colors.$color-white-hover;
+	text-align: center;
+	
+	&__title {
+		margin-bottom: 1rem;
+	}
+}
