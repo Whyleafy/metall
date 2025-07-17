@@ -1,3 +1,4 @@
+// Header.module.scss
 @use "../../app/styles/colors.scss";
 
 .header {
@@ -6,9 +7,14 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding-inline: 2rem ;
+	padding-inline: 2rem;
 	height: 4rem;
-	
+	position: relative; // для оверлея
+
+	@media (max-width: 768px) {
+		padding-inline: 1rem;
+	}
+
 	&__link {
 		display: flex;
 		align-items: center;
@@ -16,41 +22,45 @@
 		font-size: 1.15rem;
 		font-weight: 600;
 		gap: 1rem;
-		
+		text-decoration: none;
+
 		&__article {
-			transition: all 0.3s;
-			
-			@media (max-width: 480px) {
-				display: none;
-			}
-			
-			&:hover {
-				color: colors.$color-red;
-			}
+		transition: all 0.3s;
+
+		@media (max-width: 480px) {
+			display: none;
 		}
 
+		&:hover {
+			color: colors.$color-red;
+		}
+		}
 	}
-	
+
 	&__phone {
 		display: flex;
 		align-items: center;
 		gap: 0.75rem;
-		
-		&__icon {
-			width: 1rem;
-			height: rem;
+
+		@media (max-width: 768px) {
+		display: none;
 		}
-		
+
+		&__icon {
+		width: 1rem;
+		height: 1rem;
+		color: colors.$color-black;
+		}
+
 		&__number {
-			font-weight: 600;
-			transition: all 0.3s;
-			color: colors.$color-black;
-			text-decoration: none;
-			
-			&:hover {
-				color: colors.$color-red;
-			}
+		font-weight: 600;
+		transition: all 0.3s;
+		color: colors.$color-black;
+		text-decoration: none;
+
+		&:hover {
+			color: colors.$color-red;
+		}
 		}
 	}
-	
 }
