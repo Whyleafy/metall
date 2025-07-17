@@ -1,13 +1,9 @@
 import { prisma } from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
 
-interface Params {
-	params: {
-		id: string;
-	};
-}
 
-export async function GET(_: NextRequest, { params }: Params) {
+
+export async function GET(_: NextRequest, { params }: any) {
 	try {
 		const category = await prisma.category.findUnique({
 			where: { id: params.id },
