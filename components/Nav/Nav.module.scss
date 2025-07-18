@@ -29,8 +29,11 @@
     @media (max-width: 768px) {
         display: flex;
         justify-content: flex-end;
-        padding: 1rem;
     }
+	
+	&__button {
+		padding: 0.5rem 1rem;
+	}
 }
 
 .overlay {
@@ -41,13 +44,19 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
     z-index: 100;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.fadeOut {
+    opacity: 0;
 }
 
 .drawer {
     position: fixed;
     top: 0;
     right: 0;
-    width: 75%;
+    width: 60%;
     max-width: 300px;
     height: 100%;
     background-color: colors.$color-white;
@@ -62,14 +71,18 @@
     flex-direction: column;
     gap: 1.5rem;
     font-weight: 500;
+	
+	li {
+		border-bottom: 1.75px solid colors.$color-white-hover;
+		padding-bottom: 0.45rem;
+	}
 }
 
 .drawer__link {
     color: colors.$color-black;
     text-decoration: none;
     transition: all 0.3s;
-    font-size: 1.5rem;
-    border-bottom: 1.75px solid colors.$color-white-hover;
+    font-size: 1.25rem;
     padding-bottom: 0.5rem;
 
     &:hover {

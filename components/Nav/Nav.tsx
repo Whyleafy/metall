@@ -4,49 +4,55 @@ import React, { useEffect, useState } from 'react';
 import styles from './Nav.module.scss';
 import Link from 'next/link';
 import { Button } from '@/components';
-import { Menu, X } from 'lucide-react';
+import { Menu } from 'lucide-react';
+
+const links = [
+    { href: '/', label: 'Главная' },
+    { href: '/price-list', label: 'Цены' },
+    { href: '#main', label: 'Услуги' },
+    { href: '#contacts', label: 'Контакты' },
+    { href: '/blog', label: 'Блог' },
+];
 
 export const Nav = () => {
     const [isMobile, setIsMobile] = useState(false);
-    const [menuOpen, setMenuOpen] = useState(false);
-    const [isAnimating, setIsAnimating] = useState(false);
+    const [menuVisible, setMenuVisible] = useState(false);
+    const [isClosing, setIsClosing] = useState(false);
 
     useEffect(() => {
-        const checkMobile = () => setIsMobile(window.innerWidth <= 768);
-        checkMobile();
-        window.addEventListener('resize', checkMobile);
-        return () => window.removeEventListener('resize', checkMobile);
+        const mediaQuery = window.matchMedia('(max-width: 768px)');
+        const handleResize = () => setIsMobile(mediaQuery.matches);
+        handleResize();
+        mediaQuery.addEventListener('change', handleResize);
+        return () => mediaQuery.removeEventListener('change', handleResize);
     }, []);
 
-    useEffect(() => {
-        document.body.style.overflow = menuOpen ? 'hidden' : '';
-    }, [menuOpen]);
+    const openMenu = () => {
+        setMenuVisible(true);
+    };
 
     const closeMenu = () => {
-        setIsAnimating(true);
+        setIsClosing(true);
         setTimeout(() => {
-            setMenuOpen(false);
-            setIsAnimating(false);
-        }, 300);
+            setMenuVisible(false);
+            setIsClosing(false);
+        }, 300); // совпадает с длительностью анимации
     };
 
-    const toggleMenu = () => {
-        if (menuOpen) {
-            closeMenu();
-        } else {
-            setMenuOpen(true);
-        }
-    };
+    const renderLinks = (className: string, onClick?: () => void) =>
+        links.map(({ href, label }) => (
+            <li key={href}>
+                <Link href={href} className={className} onClick={onClick}>
+                    {label}
+                </Link>
+            </li>
+        ));
 
     if (!isMobile) {
         return (
             <nav className={styles.nav}>
                 <ul className={styles.nav__list}>
-                    <li><Link href="/" className={styles.nav__list__link}>Главная</Link></li>
-                    <li><Link href="/price-list" className={styles.nav__list__link}>Цены</Link></li>
-                    <li><Link href="#main" className={styles.nav__list__link}>Услуги</Link></li>
-                    <li><Link href="#contacts" className={styles.nav__list__link}>Контакты</Link></li>
-                    <li><Link href="/blog" className={styles.nav__list__link}>Блог</Link></li>
+                    {renderLinks(styles.nav__list__link)}
                 </ul>
             </nav>
         );
@@ -55,27 +61,30 @@ export const Nav = () => {
     return (
         <>
             <nav className={styles.mobileNav}>
-                <Button variant="outline" onClick={toggleMenu}>
-                    {menuOpen && !isAnimating ? <X size={24} /> : <Menu size={24} />}
+                <Button 
+				style={{ padding: '0.6rem 0.85rem' }}
+				variant="outline" 
+				onClick={openMenu} 
+				className={styles.mobileNav__button}
+				>
+                    <Menu size={20} />
                 </Button>
             </nav>
 
-            {(menuOpen || isAnimating) && (
+            {menuVisible && (
                 <>
                     <div
-                        className={styles.overlay}
+                        className={`${styles.overlay} ${isClosing ? styles.fadeOut : ''}`}
                         onClick={closeMenu}
                     />
 
                     <div
-                        className={`${styles.drawer} ${menuOpen ? styles.slideIn : styles.slideOut}`}
+                        className={`${styles.drawer} ${
+                            isClosing ? styles.slideOut : styles.slideIn
+                        }`}
                     >
                         <ul className={styles.drawer__list}>
-                            <li><Link href="/" className={styles.drawer__link} onClick={closeMenu}>Главная</Link></li>
-                            <li><Link href="/price-list" className={styles.drawer__link} onClick={closeMenu}>Цены</Link></li>
-                            <li><Link href="#main" className={styles.drawer__link} onClick={closeMenu}>Услуги</Link></li>
-                            <li><Link href="#contacts" className={styles.drawer__link} onClick={closeMenu}>Контакты</Link></li>
-                            <li><Link href="/blog" className={styles.drawer__link} onClick={closeMenu}>Блог</Link></li>
+                            {renderLinks(styles.drawer__link, closeMenu)}
                         </ul>
                     </div>
                 </>
