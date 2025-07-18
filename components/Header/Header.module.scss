@@ -9,10 +9,17 @@
 	justify-content: space-between;
 	padding-inline: 2rem;
 	height: 4rem;
-	position: relative; 
+	position: fixed;
+	transition: transform 0.3s ease-in-out;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	
+	 
 
 	@media (max-width: 768px) {
-		padding-inline: 1rem;
+		padding-inline: 1.25rem;
 	}
 
 	&__link {
@@ -63,4 +70,8 @@
 		}
 		}
 	}
+}
+
+.hidden {
+    	transform: translateY(-100%);
 }
