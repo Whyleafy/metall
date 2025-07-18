@@ -4,7 +4,7 @@ import { Button, Title } from '@/components';
 
 export const HeroSection = () => {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="main">
       <div className={styles.section__container}>
         <h1 className={styles.section__container__title}>
           Сдавайте металл — экономьте ресурсы, зарабатывайте деньги!

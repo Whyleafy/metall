@@ -5,7 +5,7 @@ import { Phone, Send } from 'lucide-react';
 
 export const ContactSection = () => {
 	return (
-		<section className={styles.section}>
+		<section className={styles.section} id="contacts">
 			<Title tag='h2' color='white' className={styles.section__title}>Позвоните нам прямо сейчас</Title>
 			<p className={styles.section__p}>Быстрая консультация и выезд курьера в удобное время</p>
 			<div className={styles.callAction}>

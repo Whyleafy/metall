@@ -1,11 +1,11 @@
-'use client'
-
 import { CategoryWithMetals, MetalTable, Title } from "@/components";
-import useCategories from "@/Hooks/useCategories"
-import styles from './page.module.scss'
+import styles from './page.module.scss';
+import type { CategoryMetals } from "../../types/metals"
+import { getCategoriesWithMetals } from "../actions/getCategoryWithMetals";
 
-export default function PriceList() {
-	const categories = useCategories()
+
+export default async function PriceList() {
+	const categories = await getCategoriesWithMetals()
 	
 	return (
 		<div className={styles.priceList}>
