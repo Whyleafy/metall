@@ -18,7 +18,7 @@ export const Header = () => {
 		const updateHeader = () => {
 			const currentScrollY = window.scrollY;
 			
-			setIsHidden(currentScrollY > lastScrollY && currentScrollY > 100);
+			setIsHidden(currentScrollY > lastScrollY && currentScrollY > 90);
 			
 			lastScrollY = currentScrollY;
 		};
