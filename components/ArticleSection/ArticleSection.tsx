@@ -25,7 +25,7 @@ export const ArticleSection: React.FC<Props> = ({ className }) => {
 				))}
 			</div>
 			
-			<Button variant='outline' as='link' href='/articles'>Все статьи</Button>
+			<Button variant='red' as='link' href='/articles'>Все статьи</Button>
 		</div>
 	);
 };

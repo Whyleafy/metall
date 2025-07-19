@@ -19,7 +19,7 @@ export  const PriceSection: React.FC<Props> =  ({ className }) => {
 			<Title tag='h2' color='black' className={styles.section__title}>Актуальные расценки на металлы</Title>
 			<p className={styles.section__p}>Цены обновляются ежедневно и могут изменяться в зависимости от качества металла</p>
 			<MetalTable metals={metals} />
-			<Button className={styles.section__button} as='link' href='/price-list' variant='outline'>Посмотреть все расценки</Button>
+			<Button className={styles.section__button} as='link' href='/price-list' variant='red'>Посмотреть все расценки</Button>
 		</section>
 	);
 };
