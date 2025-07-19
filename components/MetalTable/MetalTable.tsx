@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from "./MetalTable.module.scss";
+import { formatDate } from '@/lib/formatDate';
 // import {Metals} from '../../types/metals'
 // import { metals } from './metals';
 
@@ -29,7 +30,7 @@ export const MetalTable: React.FC<MetalTableProps> = ({ metals }) => {
 					<div className={styles.metalRow__column}>{metal.name}</div>
 					<div className={styles.metalRow__column}>{metal.cashPrice ?? "-"}</div>
 					<div className={styles.metalRow__column}>{metal.nonCashPrice ?? "-"}</div>
-					<div className={styles.metalRow__column}>{new Date(metal.updatedAt).toLocaleDateString()}</div>
+					<div className={styles.metalRow__column}>{formatDate(metal.updatedAt)}</div>
 				</div>
 			))}
 			

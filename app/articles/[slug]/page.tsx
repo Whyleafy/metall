@@ -3,6 +3,7 @@ import { Button, MiniArticle, Title } from "@/components"
 import Link from "next/link";
 import styles from "./page.module.scss"
 import { ArrowLeft, Calendar } from "lucide-react";
+import { formatDate } from "@/lib/formatDate";
 
 export default async function ArticlePage({ params }: any) {
 	const { slug } = params;
@@ -44,7 +45,7 @@ export default async function ArticlePage({ params }: any) {
 			<div className={styles.date}>
 				<Calendar  className={styles.date__icon} size={20}/>
 				<p className={styles.date__p}>
-					{new Date(article.createdAt).toLocaleDateString()}
+					{formatDate(article.createdAt)}
 				</p>
 			</div>
 			
