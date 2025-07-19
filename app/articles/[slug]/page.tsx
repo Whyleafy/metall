@@ -44,7 +44,7 @@ export default async function ArticlePage({ params }: any) {
 			<div className={styles.date}>
 				<Calendar  className={styles.date__icon} size={20}/>
 				<p className={styles.date__p}>
-					{article.createdAt.toLocaleDateString()}
+					{new Date(article.createdAt).toLocaleDateString()}
 				</p>
 			</div>
 			
