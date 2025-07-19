@@ -1,8 +1,10 @@
 @use "../../app/styles/colors.scss";
+@use "../../app/styles/mixins.scss" as mixins;
 
 .section {
 	background-color: #f9fafb;
 	padding: 4rem 1rem;
+	@include mixins.responsive-bg("/background2.svg");
 
 	&__container {
 		margin: 0 auto;

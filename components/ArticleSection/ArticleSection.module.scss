@@ -1,9 +1,12 @@
+@use "../../app/styles/mixins.scss" as mixins;
+
 .section {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 3rem 2rem;
 	flex-direction: column;
+	@include mixins.responsive-bg("/background.svg");
 	text-align: center;
 	gap: 1rem;
 	
@@ -20,6 +23,10 @@
 		@media (min-width: 768px) {
 			grid-template-columns: repeat(3, minmax(0, 1fr));
 		}
+	}
+	
+	@media (max-width: 768px) {
+		@include mixins.responsive-bg("/background-mobile.svg");
 	}
 	
 }
