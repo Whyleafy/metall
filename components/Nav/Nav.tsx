@@ -11,7 +11,7 @@ const links = [
     { href: '/price-list', label: 'Цены' },
     { href: '/#main', label: 'Услуги' },
     { href: '/#contacts', label: 'Контакты' },
-    { href: '/blog', label: 'Блог' },
+    { href: '/articles', label: 'Блог' },
 ];
 
 export const Nav = () => {
