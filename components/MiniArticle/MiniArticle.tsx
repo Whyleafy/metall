@@ -17,7 +17,7 @@ export const MiniArticle: React.FC<Props> = ({ title, description, link, image, 
 			<img src={image} alt="article image" className={styles.card__image}/>
 			<div className={styles.card__content}>
 				<Title color='black' tag='h4' className={styles.card__content__title}>{title}</Title>
-				<p className={styles.card__content__description}>{description}</p>
+				<p className={styles.card__content__description}>{description.slice(0,140)}...</p>
 				<Link href={link} className={styles.card__content__link}>Читать далее →</Link>
 			</div>
 		</div>

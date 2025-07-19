@@ -1,7 +1,15 @@
 @use "../../styles/colors.scss" as colors;
 
 .page {
-	padding: 7rem 16rem;
+	padding: 7rem 12rem;
+	
+	@media (max-width: 1024px) {
+		padding: 6rem 6rem;
+	}
+	
+	@media (max-width: 768px) {
+		padding: 6rem 2rem;
+	}
 }
 
 .links {
