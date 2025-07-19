@@ -56,4 +56,8 @@
 			background-color: colors.$color-white-hover;
 		}
 	}
+	
+	&__rounded {
+		border-radius: 1.5rem;
+	}
 }

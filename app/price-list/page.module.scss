@@ -10,6 +10,13 @@
 	@media (max-width: 768px) {
 		
 	}
+	
+	&__buttons {
+		display: flex;
+		gap: 2rem;
+		// align-items: flex-start;
+		// justify-content: start;
+	}
 }
 
 .container {
