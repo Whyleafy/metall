@@ -7,6 +7,7 @@ export type BaseProps = {
   className?: string;
   fullWidth?: boolean;
   rounded?: boolean;
+  sm?: boolean;
   children: React.ReactNode;
 };
 

@@ -12,7 +12,7 @@ export default async function PriceList() {
 			<Title tag="h2" color="black">Таблица расценок </Title>
 			<div className={styles.priceList__buttons}>
 				{categories.map((category) => (
-					<Button key={category.id} rounded={true} variant="outline" as="link" href={`#${category.name}`} >{category.name.slice(0,12)}...</Button>
+					<Button sm={true} key={category.id} rounded={true} variant="outline" as="link" href={`#${category.name}`} >{category.name.slice(0,12)}...</Button>
 				))}
 			</div>
 			<div className={styles.container}> 

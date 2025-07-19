@@ -11,7 +11,8 @@ export const Button = forwardRef<
   const {
     variant = 'red',
     children,
-	rounded = false,
+	rounded,
+	sm,
     className = '',
     as = 'button', 
     ...rest
@@ -20,7 +21,8 @@ export const Button = forwardRef<
   const buttonClasses = cn(
     styles.button,
     styles[`button__${variant}`],
-	styles[`button__${rounded}`],
+	rounded && styles.button__rounded,
+	sm && styles.button__sm,
     className
   );
 
