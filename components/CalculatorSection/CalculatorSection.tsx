@@ -8,6 +8,8 @@ interface Props {
 }
 
 export const CalculatorSection: React.FC<Props> = ({ className }) => {
+	
+	
 	return (
 		<section className={styles.section}>
 			<div  className={styles.section__text}>

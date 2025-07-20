@@ -21,7 +21,7 @@ export const MetalTable: React.FC<MetalTableProps> = ({ metals }) => {
 		<div className={styles.table}>
 			<div className={styles.table__row}>
 				<div className={styles.heading}>Наименование металла</div>
-       			<div className={styles.heading}>Стоимость (безнал, ₽/кг)</div>
+       			<div className={styles.heading}>Стоимость (₽/кг)</div>
         		<div className={styles.heading}>Стоимость (*, ₽/кг)</div>
 			</div>
 			{metals

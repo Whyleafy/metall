@@ -7,7 +7,7 @@ export const HeroSection = () => {
     <section className={styles.section} id="main">
       <div className={styles.section__container}>
         <h1 className={styles.section__container__title}>
-          Сдавайте металл — экономьте ресурсы, зарабатывайте деньги!
+          Сдавайте металл — зарабатывайте деньги!
         </h1>
         <p className={styles.section__container__paragraph}>
           Принимаем все виды металлолома по выгодным ценам. Быстрая оценка, честные весы, моментальная оплата.

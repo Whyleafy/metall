@@ -29,8 +29,8 @@ export const Footer = () => {
 				{/* Время работы */}
 				<div className={styles.footer__grid__column}>
 					<p className={styles.title__text}>Время работы</p>
-					<div className={styles.string}><Clock className={styles.string__icon} />Пн–Сб: 8:30–20:00. 
-					Воскресенье выходной</div>
+					<div className={styles.string}><Clock className={styles.string__icon} />Пн–Сб: 8:30–20:00</div>
+					<div className={styles.string}>Воскресенье выходной</div>
 				</div>
 
 				{/* Полезные ссылки */}

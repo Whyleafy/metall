@@ -5,82 +5,89 @@ import styles from './Calculator.module.scss';
 import { Calculator as CalculatorIcon } from 'lucide-react';
 import { Title } from '@/components';
 import { Metal } from '@/types/metals';
+import { getCategoriesWithMetals } from '@/app/actions/getCategoryWithMetals';
 
+interface CategoryWithMetals {
+    id: string;
+    name: string;
+    metals: Metal[];
+}
 
 export const Calculator = () => {
-  const [selectedId, setSelectedId] = useState<string>('');
-  const [weight, setWeight] = useState<string>('');
-  const [metals, setMetals] = useState<Metal[]>([]);
-  const selectedMetal = metals.find((m) => m.id === selectedId);
+    const [selectedId, setSelectedId] = useState<string>('');
+    const [weight, setWeight] = useState<string>('');
+    const [categories, setCategories] = useState<CategoryWithMetals[]>([]);
 
-	
-	useEffect(() => {
-		const fetchmetals = async () => {
-			try {
-				const response = await fetch("api/metals");
-				
-				if (!response.ok) {
-						throw new Error("Ошибка при получении данных");
-				}
-				const data = await response.json();
-				setMetals(data);
-			} catch (error) {
-				console.log(error)
-			}
-		};
-		fetchmetals();
-	}, []);
+    // Загружаем данные при монтировании компонента
+    useEffect(() => {
+        const loadData = async () => {
+            const data = await getCategoriesWithMetals();
+            setCategories(data);
+        };
 
-  const result = selectedMetal?.cashPrice ? selectedMetal?.cashPrice * parseFloat(weight) : 0;
+        loadData();
+    }, []);
 
-  return (
-    <div className={styles.calculator}>
-      <div className={styles.calculator__text}>
-        <CalculatorIcon />
-        <Title tag='h3' color='black'>Расчет стоимости</Title>
-      </div>
+    // Все металлы из всех категорий
+    const allMetals = categories.flatMap(category => category.metals);
+    const selectedMetal = allMetals.find(metal => metal.id === selectedId);
 
-      <div>
-        <label htmlFor="metal-select" className={styles.label}>
-          Вид металла
-        </label>
-        <select
-          id="metal-select"
-          className={styles.select}
-          value={selectedId}
-          onChange={(e) => setSelectedId(e.target.value)}
-        >
-          <option value="">Выберите металл</option>
-         {metals.map((metal) => (
-			<option value={metal.id} key={metal.id}>{metal.name}</option>
-		 ))}
-        </select>
-      </div>
+    const result = selectedMetal?.cashPrice ? selectedMetal?.cashPrice * parseFloat(weight) : 0;
 
-      <div>
-        <label htmlFor="weight" className={styles.label}>
-          Вес металла (кг)
-        </label>
-        <input
-          id="weight"
-          type="number"
-          placeholder="Введите вес"
-          value={weight}
-          onChange={(e) => setWeight(e.target.value)}
-          className={styles.input}
-          min={0}
-        />
-      </div>
+    return (
+        <div className={styles.calculator}>
+            <div className={styles.calculator__text}>
+                <CalculatorIcon />
+                <Title tag="h3" color="black">Расчет стоимости</Title>
+            </div>
 
-      {result > 0 && (
-        <div className={styles.result}>
-          <p>Примерная стоимость:</p>
-          <p className={styles.result__price}>{result.toLocaleString()} ₽</p>
-          <p className={styles.result__note}>
-            * Окончательная цена определяется при осмотре
-          </p>
+            <div>
+                <label htmlFor="metal-select" className={styles.label}>
+                    Вид металла
+                </label>
+                <select
+                    id="metal-select"
+                    className={styles.select}
+                    value={selectedId}
+                    onChange={(e) => setSelectedId(e.target.value)}
+                >
+                    <option value="">Выберите металл</option>
+                    {categories.map((category) => (
+                        <optgroup label={category.name} key={category.id}>
+                            {category.metals.map((metal) => (
+                                <option value={metal.id} key={metal.id}>
+                                    {metal.name}
+                                </option>
+                            ))}
+                        </optgroup>
+                    ))}
+                </select>
+            </div>
+
+            <div>
+                <label htmlFor="weight" className={styles.label}>
+                    Вес металла (кг)
+                </label>
+                <input
+                    id="weight"
+                    type="number"
+                    placeholder="Введите вес"
+                    value={weight}
+                    onChange={(e) => setWeight(e.target.value)}
+                    className={styles.input}
+                    min={0}
+                />
+            </div>
+
+            {result > 0 && (
+                <div className={styles.result}>
+                    <p>Примерная стоимость:</p>
+                    <p className={styles.result__price}>{result.toLocaleString()} ₽</p>
+                    <p className={styles.result__note}>
+                        * Окончательная цена определяется при осмотре
+                    </p>
+                </div>
+            )}
         </div>
-      )}
-    </div>
-  );
+    );
 };
