@@ -18,7 +18,6 @@ export const Calculator = () => {
     const [weight, setWeight] = useState<string>('');
     const [categories, setCategories] = useState<CategoryWithMetals[]>([]);
 
-    // Загружаем данные при монтировании компонента
     useEffect(() => {
         const loadData = async () => {
             const data = await getCategoriesWithMetals();
@@ -28,11 +27,10 @@ export const Calculator = () => {
         loadData();
     }, []);
 
-    // Все металлы из всех категорий
     const allMetals = categories.flatMap(category => category.metals);
     const selectedMetal = allMetals.find(metal => metal.id === selectedId);
 
-    const result = selectedMetal?.cashPrice ? selectedMetal?.cashPrice * parseFloat(weight) : 0;
+    const result = selectedMetal?.nonCashPrice ? selectedMetal?.nonCashPrice * parseFloat(weight) : 0;
 
     return (
         <div className={styles.calculator}>
