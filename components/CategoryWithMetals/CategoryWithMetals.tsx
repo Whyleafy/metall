@@ -19,7 +19,7 @@ export const CategoryWithMetals: React.FC<Props> = ({ category, id }) => {
 	if (category.metals.length === 0) return null; 
 	return (
 		<div className={styles.table} id={id}>
-			<Title className={styles.table__title} tag="h2" color="black">{category.name.trim().toLowerCase() === "главная" ? "Прием металлов по таблице" : category.name}</Title>
+			<Title className={styles.table__title} tag="h2" color="black">{category.name.trim().toLowerCase() === "главная" ? "Цветные металлы" : category.name}</Title>
 			<MetalTable metals={category.metals} />
 		</div>
 	);
