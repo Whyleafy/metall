@@ -10,7 +10,10 @@ export const getCategoriesWithMetals = async () => {
           metal: true
         }
       }
-    }
+    },
+	orderBy: {
+		order: 'asc'
+	}
   });
 
   return categories.map(category => ({

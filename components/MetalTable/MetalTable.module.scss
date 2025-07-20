@@ -12,7 +12,7 @@
 
 .table__row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   background-color: $color-red; 
   color: $color-white;   
@@ -27,7 +27,7 @@
 
 .metalRow {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem; 
   padding: 1rem; 
   border-top: 1px solid #e5e7eb; 
@@ -65,15 +65,15 @@
   .metalRow {
     gap: 0.75rem;
     padding: 0.7rem;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
   }
 
   .metalRow__column {
-    font-size: 0.68rem;
+    font-size: 0.95rem;
 	font-weight: 600;
   }
   
   .heading {
-	font-size: 0.75rem;
+	font-size: 0.95rem;
   }
 }

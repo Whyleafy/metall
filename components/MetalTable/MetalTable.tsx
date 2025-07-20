@@ -9,7 +9,7 @@ export interface Metal {
 	name: string;
 	cashPrice: number | null;
 	nonCashPrice: number | null;
-	updatedAt: Date;
+	updatedAt?: Date;
 }
 
 interface MetalTableProps {
@@ -21,16 +21,16 @@ export const MetalTable: React.FC<MetalTableProps> = ({ metals }) => {
 		<div className={styles.table}>
 			<div className={styles.table__row}>
 				<div className={styles.heading}>Наименование металла</div>
-       			<div className={styles.heading}>Стоимость (наличные, ₽/кг)</div>
-        		<div className={styles.heading}>Стоимость (безнал, ₽/кг)</div>
-        		<div className={styles.heading}>Дата обновления</div>
+       			<div className={styles.heading}>Стоимость (безнал, ₽/кг)</div>
+        		<div className={styles.heading}>Стоимость (*, ₽/кг)</div>
 			</div>
-			{metals.map((metal) => (
+			{metals
+			.filter(Boolean)
+			.map((metal) => (
 				<div key={metal.id} className={styles.metalRow}>
 					<div className={styles.metalRow__column}>{metal.name}</div>
-					<div className={styles.metalRow__column}>{metal.cashPrice ?? "-"}</div>
 					<div className={styles.metalRow__column}>{metal.nonCashPrice ?? "-"}</div>
-					<div className={styles.metalRow__column}>{formatDate(metal.updatedAt)}</div>
+					<div className={styles.metalRow__column}>{metal.cashPrice ?? "-"}</div>
 				</div>
 			))}
 			

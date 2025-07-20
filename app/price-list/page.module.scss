@@ -13,9 +13,10 @@
 	
 	&__buttons {
 		display: flex;
-		gap: 2rem;
+		gap: 1rem;
+		flex-wrap: wrap;
 		// align-items: flex-start;
-		// justify-content: start;
+		justify-content: center;
 	}
 }
 

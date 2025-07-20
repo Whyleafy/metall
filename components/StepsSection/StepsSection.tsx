@@ -23,13 +23,13 @@ export const StepsSection: React.FC<Props> = ({ className }) => {
     {
       icon: CreditCard,
       title: "Получаете оплату",
-      description: "Моментальная оплата наличными или переводом на карту удобным способом"
+      description: "Моментальная оплата на карту любого банка"
     }
   ];
 	
 	
 	return (
-		<section className={styles.section}>
+		<section className={styles.section} id="steps">
 			<div className={styles.section__text}>
 				<Title color='black' tag='h1' className={styles.section__text__title}>Как мы работаем?</Title>
 				<p className={styles.section__text__p}>Простой и прозрачный процесс в три шага</p>

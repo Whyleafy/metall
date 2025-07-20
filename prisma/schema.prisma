@@ -37,6 +37,7 @@ model Article {
 model Category {
     id     String            @id @default(cuid())
     name   String
+	order  Int?
     metals CategoryOnMetal[]
 }
 

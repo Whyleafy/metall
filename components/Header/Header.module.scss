@@ -22,6 +22,10 @@
 	@media (max-width: 768px) {
 		padding-inline: 1.25rem;
 	}
+	
+	@media (max-width: 1024px) {
+		padding-inline: 0.85rem;
+	}
 
 	&__link {
 		display: flex;
@@ -35,9 +39,9 @@
 		&__article {
 		transition: all 0.3s;
 
-		@media (max-width: 480px) {
-			display: none;
-		}
+		// @media (max-width: 480px) {
+		// 	display: none;
+		// }
 
 		&:hover {
 			color: colors.$color-red;
@@ -51,7 +55,7 @@
 		gap: 0.75rem;
 
 		@media (max-width: 768px) {
-		display: none;
+			display: none;
 		}
 
 		&__icon {
@@ -65,6 +69,10 @@
 		transition: all 0.3s;
 		color: colors.$color-black;
 		text-decoration: none;
+		
+		@media (max-width: 1024px) {
+			font-size: 0.9rem;
+		}
 
 		&:hover {
 			color: colors.$color-red;

@@ -69,7 +69,7 @@ export const ChangeInputs: React.FC<Props> = ({ className, categoryId }) => {
 		
 
 		if (res.ok) {
-			toast.error("Металл успешно удалён");
+			toast.success("Металл успешно удалён");
 			
 			setSelectedId("");
 

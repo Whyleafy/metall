@@ -11,9 +11,12 @@ export default async function PriceList() {
 		<div className={styles.priceList}>
 			<Title tag="h2" color="black">Таблица расценок </Title>
 			<div className={styles.priceList__buttons}>
-				{categories.map((category) => (
-					<Button sm={true} key={category.id} rounded={true} variant="outline" as="link" href={`#${category.name}`} >{category.name.slice(0,12)}...</Button>
-				))}
+				{categories.map((category) => {
+				const isMain = category.name.toLowerCase() === "главная";
+				return (
+					
+					<Button sm={true} key={category.id} rounded={true} variant="outline" as="link" href={`#${category.name}`} >{category.name.trim().toLowerCase() === "главная" ? "Прием металлов по таблице" : `${category.name}`}</Button>
+				)})}
 			</div>
 			<div className={styles.container}> 
 				{categories.map((category) => (

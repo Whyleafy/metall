@@ -11,9 +11,9 @@ export const ContactSection = () => {
 			<div className={styles.callAction}>
 				<div className={styles.callAction__call}>
 					<Phone className={styles.callAction__call__phone} />
-					<Title tag='h2' color='white' className={styles.callAction__call__number}>+7 (999) 123-45-67</Title>
+					<Title tag='h2' color='white' className={styles.callAction__call__number}>+7 (925) 900-24-96</Title>
 				</div>
-				<Button as="link" href='tel:+79991234567' variant='white' className={styles.callAction__button}>
+				<Button as="link" href='tel:+79259002496' variant='white' className={styles.callAction__button}>
 					<Phone className={styles.buttonIcon}/>
 					Позвонить
 				</Button>

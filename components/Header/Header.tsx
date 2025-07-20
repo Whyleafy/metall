@@ -34,15 +34,15 @@ export const Header = () => {
 			})}>
 		<Link href="/" className={styles.header__link}>
 			<Logo />
-			<p className={styles.header__link__article}>Стальной двор</p>
+			<p className={styles.header__link__article}>Стальной дворик</p>
 		</Link>
 
 		<Nav />
 
 		<div className={styles.header__phone}>
 			<Phone className={styles.header__phone__icon} />
-			<a href="tel:+79104492588" className={styles.header__phone__number}>
-			+7 (999) 123-43-53
+			<a href="tel:+79259002496" className={styles.header__phone__number}>
+			+7 (925) 900-24-96
 			</a>
 		</div>
 		</header>

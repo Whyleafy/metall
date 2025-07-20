@@ -20,8 +20,16 @@ export async function PUT(req: NextRequest, { params }: any) {
 
 export async function DELETE(_req: NextRequest, { params }: any) {
   try {
+	
+	const metalId = params.id;
+	await prisma.categoryOnMetal.deleteMany({
+      where: {
+        metalId
+      },
+    });
+	
     await prisma.metal.delete({
-      where: { id: params.id },
+      where: { id: metalId },
     });
 
     return NextResponse.json({ message: "Deleted" });

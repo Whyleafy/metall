@@ -20,7 +20,7 @@ export const YandexSection: React.FC<Props> = ({ className }) => {
 							{
 								coords: [54.828248, 37.609032],
 								address: 'Г. Пущино, Московская область',
-								schedule: 'Пн-Сб: 8:30-20:00',
+								schedule: 'Пн-Сб: 8:30-20:00, Вск: выходной',
 							},
 						]}
 					/>
@@ -31,7 +31,7 @@ export const YandexSection: React.FC<Props> = ({ className }) => {
 								<Title tag="h3" color="black" className={styles.title}>
 									Основной пункт приёма
 								</Title>
-								<p>Г. Пущино, Московская область, ул. Грузовая, д. 4</p>
+								<p>Г. Пущино, Московская область, ул. Грузовая</p>
 							</div>
 						</div>
 						<div className={styles.info__text}>
@@ -40,7 +40,7 @@ export const YandexSection: React.FC<Props> = ({ className }) => {
 								<Title tag="h3" color="black" className={styles.title}>
 									Время работы
 								</Title>
-								<p>Пн-Сб: 8:30-20:00</p>
+								<p>Пн-Сб: 8:30-20:00. Воскресенье выходной</p>
 							</div>
 						</div>
 						<div className={styles.info__text}>
@@ -49,7 +49,7 @@ export const YandexSection: React.FC<Props> = ({ className }) => {
 								<Title tag="h3" color="black" className={styles.title}>
 									Телефон
 								</Title>
-								<a href="tel:+79991234567">+7 (999) 123-45-67</a>
+								<a href="tel:+79259002496">+7 (925) 900-24-96</a>
 							</div>
 						</div>
 					</div>
