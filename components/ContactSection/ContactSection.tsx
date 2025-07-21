@@ -7,7 +7,7 @@ export const ContactSection = () => {
 	return (
 		<section className={styles.section} id="contacts">
 			<Title tag='h2' color='white' className={styles.section__title}>Позвоните нам прямо сейчас</Title>
-			<p className={styles.section__p}>Быстрая консультация и выезд курьера в удобное время</p>
+			<p className={styles.section__p}>Быстрая консультация в удобное время</p>
 			<div className={styles.callAction}>
 				<div className={styles.callAction__call}>
 					<Phone className={styles.callAction__call__phone} />
