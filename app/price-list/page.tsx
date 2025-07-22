@@ -10,7 +10,7 @@ export default async function PriceList() {
 	
 	return (
 		<div className={styles.priceList}>
-			<Title tag="h2" color="black">Таблица расценок </Title>
+			<Title tag="h2" color="black">Прайс лист</Title>
 			<div className={styles.priceList__buttons}>
 				{categories.map((category) => {
 				return (

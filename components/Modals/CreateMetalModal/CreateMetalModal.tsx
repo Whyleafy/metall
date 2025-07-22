@@ -1,7 +1,7 @@
 'use client'
 import { FC, useState } from "react";
 import { Button, Title, Modal } from "@/components";
-import styles from "./CreateMetallModal.module.scss";
+import styles from "./CreateMetalModal.module.scss";
 import toast from "react-hot-toast";
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 	categoryId: string;
 }
 
-export const CreateMetallModal: FC<Props> = ({ isActive, setActive, categoryId }) => {
+export const CreateMetalModal: FC<Props> = ({ isActive, setActive, categoryId }) => {
 	const [name, setName] = useState("");
 	const [cashPrice, setCashPrice] = useState('');
 	const [nonCashPrice, setNonCashPrice] = useState('');
@@ -75,4 +75,4 @@ export const CreateMetallModal: FC<Props> = ({ isActive, setActive, categoryId }
 	);
 };
 
-export default CreateMetallModal;
+export default CreateMetalModal;

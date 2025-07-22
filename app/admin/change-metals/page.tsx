@@ -1,6 +1,6 @@
 'use client'
 
-import { Button, ChangeInputs, CreateMetallModal, Select, Title } from "@/components";
+import { Button, ChangeInputs, CreateMetalModal, Select, Title } from "@/components";
 import styles from './page.module.scss'
 import { useState } from "react";
 import useCategories from "@/Hooks/useCategories";
@@ -30,7 +30,7 @@ export default function ChangeMetals() {
 						<ChangeInputs categoryId={selectedId} />
 						<div>
 							<Button onClick={() => setModalActive(true)} variant="red"> Создать металл</Button>
-							<CreateMetallModal categoryId={selectedId} setActive={setModalActive} isActive={modalActive} />
+							<CreateMetalModal categoryId={selectedId} setActive={setModalActive} isActive={modalActive} />
 						</div>
 					</div>
 				}

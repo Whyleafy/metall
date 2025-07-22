@@ -29,7 +29,7 @@ export const YandexSection: React.FC<Props> = ({ className }) => {
 							<MapPin className={styles.info__text__icon} />
 							<div>
 								<Title tag="h3" color="black" className={styles.title}>
-									Основной пункт приёма
+									Наш адрес
 								</Title>
 								<p>Г. Пущино, Московская область, ул. Грузовая</p>
 							</div>
