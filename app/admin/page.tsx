@@ -1,4 +1,4 @@
-import { Button, ChangeInputs, Title, Modal, CreateMetallModal } from "@/components";
+import { Button, ChangeInputs, Title, Modal, CreateMetalModal } from "@/components";
 import styles from "./page.module.scss";
 
 
