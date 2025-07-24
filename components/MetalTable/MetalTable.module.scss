@@ -6,8 +6,12 @@
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
               0 4px 6px -4px rgba(0, 0, 0, 0.1); 
   overflow: hidden;
-  width: 100%;
+  width: 80%;
   text-align: start;
+  
+  @media (max-width: 768px) {
+	width: 100%;
+  }
 }
 
 .table__row {
@@ -50,6 +54,7 @@
     &:nth-child(2),
     &:nth-child(3) {
       color: $color-red; 
+	  text-align: center;
       font-weight: 600;
     }
 

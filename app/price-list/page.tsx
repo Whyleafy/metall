@@ -1,26 +1,27 @@
 import { Button, CategoryWithMetals, Title } from "@/components";
 import styles from './page.module.scss';
-import { getCategoriesWithMetals } from "../actions/getCategoryWithMetals";
+import { buttons, categories } from "./constants";
+import { Metadata } from "next";
 
-export const dynamic = 'force-dynamic';
-export const revalidate = 3600;
+export const metadata: Metadata = {
+	title: "Прайс лист актуальных цен на металлы"
+}
 
-export default async function PriceList() {
-	const categories = await getCategoriesWithMetals()
+export default function PriceList() {
 	
 	return (
 		<div className={styles.priceList}>
 			<Title tag="h2" color="black">Прайс лист</Title>
 			<div className={styles.priceList__buttons}>
-				{categories.map((category) => {
+				{buttons.map((button) => {
 				return (
 					
-					<Button className={styles.priceList__buttons__button} sm={true} key={category.id} rounded={true} variant="outline" as="link" href={`#${category.name}`} >{category.name.trim().toLowerCase() === "главная" ? "Цветные металлы" : `${category.name}`.slice(0,18)}</Button>
+					<Button className={styles.priceList__buttons__button} sm={true} key={button.id} rounded={true} variant="outline" as="link" href={button.href} >{button.name}</Button>
 				)})}
 			</div>
 			<div className={styles.container}> 
 				{categories.map((category) => (
-					<CategoryWithMetals id={category.name} key={category.id} category={category} />
+					<CategoryWithMetals key={category.id} category={category} />
 				))}
 			</div>
 		</div>

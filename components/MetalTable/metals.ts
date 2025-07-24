@@ -1,9 +1,107 @@
 export const metals = [
-	{ id: "1", name: "Медь", cashPrice: 450, nonCashPrice: 1, updatedAt: "29.12.2024" },
-	{ id: "2", name: "Медь", cashPrice: 450, nonCashPrice: 410, updatedAt: "29.12.2024" },
-	{ id: "3", name: "Медь", cashPrice: 450, nonCashPrice: 410, updatedAt: "29.12.2024" },
-	{ id: "4", name: "Медь", cashPrice: 450, nonCashPrice: 410, updatedAt: "29.12.2024" },
-	{ id: "5", name: "Медь", cashPrice: 450, nonCashPrice: 410, updatedAt: "29.12.2024" },
-	{ id: "6", name: "Медь", cashPrice: 450, nonCashPrice: 410, updatedAt: "29.12.2024" },
-	{ id: "7", name: "Медь", cashPrice: 450, nonCashPrice: 410, updatedAt: "29.12.2024" }
+	{
+		id: 1,
+		name: "Лом черных металлов",
+		price: 10.5
+	},
+	{
+		id: 2,
+		name: "Медь (разносортная)",
+		price: 625
+	},
+	{
+		id: 3,
+		name: "Медь (луженая)",
+		price: 480
+	},
+	{
+		id: 4,
+		name: "Медь (колонки)",
+		price: 480
+	},
+	{
+		id: 5,
+		name: "Латунь",
+		price: 370
+	},
+	{
+		id: 6,
+		name: "Радиаторы",
+		price: 370
+	},
+	{
+		id: 7,
+		name: "Алюминий  I-1 (электротехнический)",
+		price: 145
+	},
+	{
+		id: 8,
+		name: "Алюминий  I-1 (пищевой, свыше 40л)",
+		price: 140
+	},
+	{
+		id: 9,
+		name: "Алюминий АД-31 (профильный)",
+		price: 130
+	},
+	{
+		id: 10,
+		name: "Алюминий VI (моторный)",
+		price: 96
+	},
+	{
+		id: 11,
+		name: "Алюминий XIV (разносортный)",
+		price: 95
+	},
+	{
+		id: 12,
+		name: "Алюминиевые (радиаторы/фольга/жалюзи)",
+		price: 70
+	},
+	{
+		id: 13,
+		name: "Алюминий (самолётный)",
+		price: 45
+	},
+	{
+		id: 14,
+		name: "Нержавеющая сталь 8-10%",
+		price: 45
+	},
+	{
+		id: 15,
+		name: "Свинец (оболочка кабеля)",
+		price: 90
+	},
+	{
+		id: 16,
+		name: "Свинец (переплав)",
+		price: 80
+	},
+	{
+		id: 17,
+		name: "Свинец (а/м грузики)",
+		price: 60
+	},
+	{
+		id: 18,
+		name: "Цинк (карбюраторный, решётки, сантехнический)",
+		price: 110
+	},
+	{
+		id: 19,
+		name: "Цинк (карбюратор в сборе)",
+		price: 100
+	},
+	{
+		id: 20,
+		name: "ЗАЗ-блоки",
+		price: 70
+	},
+	{
+		id: 21,
+		name: "Банка алюминиевая (из-под напитков)",
+		price: 80
+	},
 ]

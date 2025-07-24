@@ -11,21 +11,11 @@ const links = [
     { href: '/price-list', label: 'Цены' },
     { href: '/#main', label: 'Услуги' },
     { href: '/#contacts', label: 'Контакты' },
-    { href: '/articles', label: 'Блог' },
 ];
 
 export const Nav = () => {
-    const [isMobile, setIsMobile] = useState(false);
     const [menuVisible, setMenuVisible] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
-
-    useEffect(() => {
-        const mediaQuery = window.matchMedia('(max-width: 768px)');
-        const handleResize = () => setIsMobile(mediaQuery.matches);
-        handleResize();
-        mediaQuery.addEventListener('change', handleResize);
-        return () => mediaQuery.removeEventListener('change', handleResize);
-    }, []);
 
     const openMenu = () => {
         setMenuVisible(true);
@@ -36,8 +26,15 @@ export const Nav = () => {
         setTimeout(() => {
             setMenuVisible(false);
             setIsClosing(false);
-        }, 300); // совпадает с длительностью анимации
+        }, 300);
     };
+	useEffect(() => {
+		if (menuVisible) {
+			document.body.classList.add(styles.noScroll);
+		} else {
+			document.body.classList.remove(styles.noScroll);
+		}
+	}, [menuVisible]);
 
     const renderLinks = (className: string, onClick?: () => void) =>
         links.map(({ href, label }) => (
@@ -48,25 +45,22 @@ export const Nav = () => {
             </li>
         ));
 
-    if (!isMobile) {
-        return (
-            <nav className={styles.nav}>
+    return (
+        <>
+           
+            <nav className={styles.desktopNav}>
                 <ul className={styles.nav__list}>
                     {renderLinks(styles.nav__list__link)}
                 </ul>
             </nav>
-        );
-    }
 
-    return (
-        <>
             <nav className={styles.mobileNav}>
                 <Button 
-				style={{ padding: '0.6rem 0.85rem' }}
-				variant="outline" 
-				onClick={openMenu} 
-				className={styles.mobileNav__button}
-				>
+                    style={{ padding: '0.6rem 0.85rem' }}
+                    variant="outline" 
+                    onClick={openMenu} 
+                    className={styles.mobileNav__button}
+                >
                     <Menu size={20} />
                 </Button>
             </nav>

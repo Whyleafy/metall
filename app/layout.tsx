@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   other: {
     'yandex-verification': '1c164513301f1ee9',
   },
+  icons: {
+	icon: '/favicon.ico'
+  }
 };
 
 export default function RootLayout({
@@ -29,7 +32,7 @@ export default function RootLayout({
       <body className={`${inter.variable}`}>
 		<Header />
         	{children}
-			 <Toaster position="top-center" reverseOrder={false} /> {/* вот это обязательно */}
+			 <Toaster position="top-center" reverseOrder={false} /> 
 		<Footer />
       </body>
     </html>

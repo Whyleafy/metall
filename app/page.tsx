@@ -1,7 +1,5 @@
-'use client'
-import { useState } from "react";
 import styles from "./page.module.scss";
-import { HeroSection, StepsSection, PriceSection, CalculatorSection, YandexSection, ContactSection, ArticleSection, ReviewSection } from "@/components";
+import { HeroSection, StepsSection, PriceSection, YandexSection, ContactSection, ReviewSection } from "@/components";
 
 
 export default function Home() {
@@ -11,11 +9,9 @@ export default function Home() {
 			<HeroSection />
 			<StepsSection />
 			<PriceSection />
-			<CalculatorSection />
 			<YandexSection />
 			<ReviewSection />
 			<ContactSection />
-			<ArticleSection />
 		</main>
 	);
 }

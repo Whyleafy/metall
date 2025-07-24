@@ -6,22 +6,15 @@ export { HeroSection } from './HeroSection/HeroSection';
 export { Button } from './Button/Button';
 export { StepsSection } from './StepsSection/StepsSection';
 export { PriceSection } from './PriceSection/PriceSection';
-export { Calculator } from './Calculator/Calculator';
-export { CalculatorSection } from './CalculatorSection/CalculatorSection';
 export { YandexSection } from './YandexSection/YandexSection';
 export { YandexMap } from './YandexMap/YandexMap';
 export { ContactSection } from './ContactSection/ContactSection';
 export { Footer } from './Footer/Footer';
-export { MiniArticle } from './MiniArticle/MiniArticle';
-export { ArticleSection } from './ArticleSection/ArticleSection';
 export { MetalTable } from './MetalTable/MetalTable';
-export { ChangeInputs } from './ChangeInputs/ChangeInputs';
-export { Modal } from './Modals/Modal/Modal';
-export { CreateMetalModal } from './Modals/CreateMetalModal/CreateMetalModal';
 export { ReviewSection } from './ReviewSection/ReviewSection';
 export { Review } from './Review/Review';
 export { Input } from './Input/Input';
 export { Select } from './Select/Select';
 export { CategoryWithMetals } from './CategoryWithMetals/CategoryWithMetals';
-export { CreateArticleModal } from './Modals/CreateArticleModal/CreateArticleModal';
+
 

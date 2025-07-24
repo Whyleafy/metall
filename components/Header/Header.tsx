@@ -6,7 +6,7 @@ import { Nav } from '@/components';
 import styles from './Header.module.scss';
 import { Phone } from 'lucide-react';
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
+import clsx from 'clsx';
 
 export const Header = () => {
 	const [isHidden, setIsHidden] = useState(false)
@@ -29,7 +29,7 @@ export const Header = () => {
 	}, [])
 	
 	return (
-		<header className={cn(styles.header, {
+		<header className={clsx(styles.header, {
 				[styles.hidden]: isHidden,
 			})}>
 		<Link href="/" className={styles.header__link}>
