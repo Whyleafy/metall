@@ -22,11 +22,16 @@
   color: $color-white;   
   padding: 1rem 1rem;
   font-weight: 600;
+  :nth-child(2) {
+    text-align: end;
+    margin-right: 3rem; 
+  }
+   
 }
 
 .heading {
   overflow: hidden;
-
+	
 }
 
 .metalRow {
@@ -54,7 +59,8 @@
     &:nth-child(2),
     &:nth-child(3) {
       color: $color-red; 
-	  text-align: center;
+	  text-align: end;
+	  margin-right: 3rem;
       font-weight: 600;
     }
 

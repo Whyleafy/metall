@@ -18,19 +18,7 @@ export const ContactSection = () => {
 					Позвонить
 				</Button>
 			</div>
-			<div className={styles.socials}>
-				<p className={styles.socials__p}>Или свяжитесь с нами в мессенджерах:</p>
-				<div className={styles.socials__buttons}>
-					<Button variant='green' className={styles.socials__button}>
-						<img src="/whatsapp-logo.svg" className={styles.buttonIcon}/>
-						WhatsApp
-					</Button>
-					<Button variant='blue' className={styles.socials__button}>
-						<img src="/telegram-logo.svg" className={styles.buttonIcon}/> 
-						Telegram
-					</Button>
-				</div>
-			</div>
+			
 		</section>
 	);
 };

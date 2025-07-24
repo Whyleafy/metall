@@ -29,7 +29,7 @@ export const buttons = [
 	{
 		id: 'heat-exchangers',
 		href: '#heat-exchangers',
-		name: 'Кабель'
+		name: 'Теплообменники'
 	},
 	{
 		id: 'rel',
