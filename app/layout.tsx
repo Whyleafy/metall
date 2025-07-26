@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.scss";
-import favicon from '@/app/favicon.ico';
 import { Footer, Header } from "@/components";
 import { Toaster } from 'react-hot-toast';
 
@@ -29,7 +28,7 @@ export const metadata: Metadata = {
     'yandex-verification': '1c164513301f1ee9',
   },
   icons: {
-		icon: favicon.src
+		icon: '/favicon.ico'
   }
 };
 
