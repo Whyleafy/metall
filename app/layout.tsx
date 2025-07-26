@@ -29,11 +29,6 @@ export const metadata: Metadata = {
   other: {
     'yandex-verification': '1c164513301f1ee9',
   },
-  icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
-  }
 };
 
 export default function RootLayout({
@@ -45,8 +40,13 @@ export default function RootLayout({
     <html lang="ru">
 			<Head> {/* Добавляем Head компонент */}
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+				<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+				<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+				<meta property="og:image" content="/android-chrome-512x512.png" />
+				<link rel="manifest" href="/site.webmanifest" />
+				<meta name="yandex-tableau-widget" content="logo=/android-chrome-192x192.png" />
       </Head>
       <body className={`${inter.variable}`}>
 		<Header />
