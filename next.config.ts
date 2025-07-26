@@ -1,15 +1,11 @@
 const nextConfig = {
   output: 'export',
-  // Убрать ./ и использовать только для production
-  assetPrefix: process.env.NODE_ENV === 'production' ? '' : undefined,
+  // Уберите assetPrefix полностью для статики
   images: {
     unoptimized: true,
   },
-  trailingSlash: true,
-  // Добавить для next/font
-  experimental: {
-    optimizeFonts: true,
-  }
+  trailingSlash: true, // Важно для статических серверов
 };
 
 module.exports = nextConfig;
+

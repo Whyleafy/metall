@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.scss";
 import { Footer, Header } from "@/components";
 import { Toaster } from 'react-hot-toast';
+import Head from "next/head";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,7 +30,9 @@ export const metadata: Metadata = {
     'yandex-verification': '1c164513301f1ee9',
   },
   icons: {
-		icon: '/favicon.ico'
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   }
 };
 
@@ -39,7 +42,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ru">
+			<Head> {/* Добавляем Head компонент */}
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      </Head>
       <body className={`${inter.variable}`}>
 		<Header />
         	{children}
