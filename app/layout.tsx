@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.scss";
 import { Footer, Header } from "@/components";
 import { Toaster } from 'react-hot-toast';
-import Head from "next/head";
+
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,6 +29,16 @@ export const metadata: Metadata = {
   other: {
     'yandex-verification': '1c164513301f1ee9',
   },
+	icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' }
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180' }
+    ]
+  },
 };
 
 export default function RootLayout({
@@ -38,16 +48,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-			<Head> {/* Добавляем Head компонент */}
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="shortcut icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-				<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
-				<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
-				<meta property="og:image" content="/android-chrome-512x512.png" />
-				<link rel="manifest" href="/site.webmanifest" />
-				<meta name="yandex-tableau-widget" content="logo=/android-chrome-192x192.png" />
-      </Head>
       <body className={`${inter.variable}`}>
 		<Header />
         	{children}
