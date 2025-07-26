@@ -6,6 +6,7 @@ import { Toaster } from 'react-hot-toast';
 
 const inter = Inter({
   variable: "--font-inter",
+	display: 'swap',
   subsets: ["latin"],
 });
 

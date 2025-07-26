@@ -1,12 +1,15 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+const nextConfig = {
   output: 'export',
-	assetPrefix: process.env.NODE_ENV === 'production' ? './' : undefined,
-	images: {
-    unoptimized: true, 
+  // Убрать ./ и использовать только для production
+  assetPrefix: process.env.NODE_ENV === 'production' ? '' : undefined,
+  images: {
+    unoptimized: true,
   },
-	 trailingSlash: true,
+  trailingSlash: true,
+  // Добавить для next/font
+  experimental: {
+    optimizeFonts: true,
+  }
 };
 
-export default nextConfig;
+module.exports = nextConfig;
