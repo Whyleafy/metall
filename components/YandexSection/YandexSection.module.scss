@@ -4,7 +4,7 @@
 .section {
 	background-color: #f9fafb;
 	padding: 4rem 1rem;
-	@include mixins.responsive-bg("/background2.svg");
+	@include mixins.responsive-bg("/icons//background2.svg");
 
 	&__container {
 		margin: 0 auto;
