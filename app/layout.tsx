@@ -16,6 +16,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   other: {
     'yandex-verification': '53ddd28ec09f8889',
+		'google-site-verification': 'spFgbOGRUx1vZ1_D7gbkF9OoZV3HkRv64FIIROtxOVc',
   },
 	icons: {
     icon: [
