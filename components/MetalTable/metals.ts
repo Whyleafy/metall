@@ -32,27 +32,27 @@ export const metals = [
 	{
 		id: 7,
 		name: "Алюминий  I-1 (электротехнический)",
-		price: 145
+		price: 150
 	},
 	{
 		id: 8,
 		name: "Алюминий  I-1 (пищевой, свыше 40л)",
-		price: 140
+		price: 145
 	},
 	{
 		id: 9,
 		name: "Алюминий АД-31 (профильный)",
-		price: 130
+		price: 135
 	},
 	{
 		id: 10,
 		name: "Алюминий VI (моторный)",
-		price: 96
+		price: 100
 	},
 	{
 		id: 11,
 		name: "Алюминий XIV (разносортный)",
-		price: 95
+		price: 99
 	},
 	{
 		id: 12,
