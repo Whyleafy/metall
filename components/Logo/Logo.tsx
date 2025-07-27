@@ -6,7 +6,7 @@ import styles from './Logo.module.scss';
 export const Logo = ( ) => {
 	return (
 		<div className={styles.logo}>
-			<span className={styles.logo__letter}>M</span>
+			<img src="/icons/grapple.svg" alt="" className={styles.logo__img}/>
 		</div>
 	);
 };

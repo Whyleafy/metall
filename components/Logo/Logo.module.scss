@@ -1,17 +1,16 @@
 @use "../../app/styles/colors.scss";
 
 .logo {
-	width: 2rem;
-	height: 2rem;
+	width: 2.5rem;
+	height: 2.5rem;
 	background-color: colors.$color-red;
 	border-radius: 8px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	
-	&__letter {
-		color: colors.$color-white;
-		font-weight: 700;
-		font-size: 1.125rem;
+	&__img {
+		width: 1.8rem;
+		height: 1.8rem;
 	}
 }
