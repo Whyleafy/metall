@@ -9,7 +9,6 @@ import { Menu } from 'lucide-react';
 const links = [
     { href: '/', label: 'Главная' },
     { href: '/price-list', label: 'Цены' },
-    { href: '/#main', label: 'Услуги' },
     { href: '/#contacts', label: 'Контакты' },
 ];
 

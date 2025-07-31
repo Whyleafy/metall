@@ -1,0 +1,50 @@
+@use "../../app/styles/colors.scss";
+
+.accordeon {
+	text-align: start;
+
+}
+
+.item {
+	border: 2px solid colors.$color-black;
+	border-radius: 8px;
+	margin-bottom: 1rem;
+	padding: 0.8rem;
+
+	&__content {
+		font-size: 1.15rem;
+		font-weight: 500;
+		color: colors.$color-black;
+		max-height: 0;
+		line-height: 1.5rem;
+		overflow: hidden;
+		transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+
+		&--show {
+			max-height: 500px;
+			transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+		}
+	}
+}
+
+.title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+
+	h3 {
+		color: colors.$color-black;
+		font-weight: 600;
+		text-transform: uppercase;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+	
+	span {
+		font-size: 2rem;
+		color: colors.$color-black;
+		font-weight: 600;
+	}
+	
+}

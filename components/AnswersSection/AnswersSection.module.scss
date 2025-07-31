@@ -1,0 +1,21 @@
+@use "../../app/styles/colors.scss";
+
+.section {
+	padding: 3rem 2rem;
+	text-align: center;
+	
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 0.8rem;
+		
+	}
+}
+
+.line {
+	border-top: 2.5px solid colors.$color-red;
+	min-width: 10rem;
+	margin-bottom: 2rem;
+}

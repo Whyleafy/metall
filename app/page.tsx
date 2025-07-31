@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import styles from "./page.module.scss";
-import { HeroSection, StepsSection, PriceSection, YandexSection, ContactSection, ReviewSection } from "@/components";
+import { HeroSection, StepsSection, PriceSection, YandexSection, ContactSection, ReviewSection, AnswersSection } from "@/components";
 
 export const metadata: Metadata = {
 	title: "Приём металлолома в Пущино — актуальные цены, вывоз, скупка | Металлолом Пущино",
@@ -27,6 +27,7 @@ export default function Home() {
 			<YandexSection />
 			<ReviewSection />
 			<ContactSection />
+			{/*<AnswersSection />*/}
 		</main>
 	);
 }
