@@ -3,7 +3,7 @@ import styles from "./page.module.scss";
 import { HeroSection, StepsSection, PriceSection, YandexSection, ContactSection, ReviewSection, AnswersSection } from "@/components";
 
 export const metadata: Metadata = {
-	title: "Приём металлолома в Пущино — актуальные цены, вывоз, скупка | Металлолом Пущино",
+	title: "Приём металлолома в Пущино — актуальные цены, скупка | Металлолом Пущино",
   description: "Приём металлолома в Пущино по высоким ценам. Актуальная таблица цен, приём черного и цветного лома. Адрес и контакты на карте.",
 	keywords: [
     "прием металлолома Пущино",
