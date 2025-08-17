@@ -66,8 +66,8 @@
 	color: colors.$color-white-hover;
 
 	&__icon {
-		width: 1rem;
-		height: 1rem;
+		min-width: 1.5rem;
+		min-height: 1.5rem;
 		color: colors.$color-white-hover;
 	}
 }
