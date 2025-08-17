@@ -21,9 +21,9 @@ export const Footer = () => {
 				{/* Контакты */}
 				<div className={styles.footer__grid__column}>
 					<p className={styles.title__text}>Контакты</p>
-					<div className={styles.string}><Phone className={styles.string__icon} />+7 (925) 900-24-96</div>
+					<a href="tel:+79259002496" className={styles.string}><Phone className={styles.string__icon} />+7 (925) 900-24-96</a>
 					{/* <div className={styles.string}><Mail className={styles.string__icon} />info@metallpriem.ru</div> */}
-					<div className={styles.string}><MapPin className={styles.string__icon} />Г. Пущино, Московская Область, ул. Грузовая</div>
+					<div className={styles.string}><MapPin className={styles.string__icon} />Московская область, г. Пущино, ул. Грузовая, территория автостоянки Русская Тройка</div>
 				</div>
 
 				{/* Время работы */}
