@@ -2,8 +2,7 @@
 
 import React, { useState } from 'react';
 import { answers } from './constants';
-import styles from './Accordeon.module.scss'
-import Title from '../Title/Title';
+import styles from './Accordeon.module.scss';
 
 interface Props {
 	className?: string;
@@ -17,19 +16,22 @@ export const Accordeon: React.FC<Props> = ({ className }) => {
 	};
 
 	return (
-		<div className={styles.accordeon}>
-			{answers.map((item, i) => (
-				<div key={i} className={styles.item}>
-					<div className={styles.title} onClick={() => toggle(i)}>
-						<Title tag='h3' color='black'>{item.question}</Title>
-						<span>{selected === i ? `-` : `+`}</span>
-					</div>
-					<div className={`${styles.item__content} ${selected === i ? styles['item__content--show'] : ''}`}>
-						{item.answer}
-					</div>
-				</div>
-			))}
-		</div>
+			<div className={`${styles.accordeon} ${className || ''}`}>
+				{answers.map((item, i) => (
+						<div key={i} className={styles.item}>
+							<div className={styles.title} onClick={() => toggle(i)}>
+								<div className={styles.title__titleIcon}>
+									{item.question}
+									{item.icon}
+								</div>
+								<span>{selected === i ? '-' : '+'}</span>
+							</div>
+							<div className={`${styles.item__content} ${selected === i ? styles['item__content--show'] : ''}`}>
+								{item.answer}
+							</div>
+						</div>
+				))}
+			</div>
 	);
 };
 

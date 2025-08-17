@@ -9,7 +9,7 @@ interface Props {
 
 export const YandexSection: React.FC<Props> = ({ className }) => {
 	return (
-		<section className={`${styles.section} ${className || ''}`}>
+		<section id="yandex" className={`${styles.section} ${className || ''}`}>
 			<div className={styles.section__container}>
 				<Title tag="h2" color="black" className={styles.section__title}>
 					Мы рядом с вами
@@ -31,7 +31,7 @@ export const YandexSection: React.FC<Props> = ({ className }) => {
 								<Title tag="h3" color="black" className={styles.title}>
 									Наш адрес
 								</Title>
-								<p>Г. Пущино, Московская область, ул. Грузовая</p>
+								<p>Московская область, г. Пущино, ул. Грузовая, территория автостоянки Русская Тройка</p>
 							</div>
 						</div>
 						<div className={styles.info__text}>

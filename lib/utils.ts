@@ -1,6 +1,6 @@
-import { clsx } from "clsx";
+import { clsx, ClassValue } from "clsx";
 
 
-export function cn(...inputs: (string | undefined | null | false)[]) {
+export function cn(...inputs: ClassValue[]) {
   return clsx(inputs);
 }

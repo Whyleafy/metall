@@ -12,7 +12,7 @@ export const AnswersSection: React.FC<Props> = ({ className }) => {
 	return (
 		<section className={styles.section}>
 			<div className={styles.section__title}>
-				<Title tag='h1' color='black'>Ответы на самые частые вопросы</Title>
+				<Title tag='h2' color='black'>Ответы на самые частые вопросы</Title>
 				<div className={styles.line}/>
 			</div>
 			<Accordeon />

@@ -1,0 +1,76 @@
+@use "../../app/styles/colors.scss";
+
+.section {
+    display: flex;
+    background-color: #f9fafb;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.p {
+    font-size: 1.115rem;
+    font-weight: 500;
+    color: colors.$color-black;
+    margin-bottom: 2rem;
+}
+
+.modal {
+    padding: 0px !important;
+    max-width: 80%;
+    background-color: transparent !important;
+}
+
+.title {
+    margin-bottom: 1rem;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 40rem;
+}
+
+.keen-slider {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.image {
+    max-width: 80vw;   // ширина не больше 80% от окна
+    max-height: 80vh;  // высота не больше 80% от окна
+    width: auto;       // сохраняем пропорции
+    height: auto;
+    border-radius: 0.5rem;
+    object-fit: contain; // чтобы не обрезалось
+}
+
+
+
+.slideImage {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: gray;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: black;
+}

@@ -6,19 +6,30 @@
 }
 
 .item {
-	border: 2px solid colors.$color-black;
+
+	background-color: #f2f2f2;
 	border-radius: 8px;
 	margin-bottom: 1rem;
-	padding: 0.8rem;
+	padding: 1.2rem;
 
 	&__content {
 		font-size: 1.15rem;
-		font-weight: 500;
+		white-space: pre-line;
+		font-weight: 450;
 		color: colors.$color-black;
 		max-height: 0;
 		line-height: 1.5rem;
 		overflow: hidden;
 		transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		a {
+			color: colors.$color-red;
+			transition: all 0.3s ease-in-out;
+		}
 
 		&--show {
 			max-height: 500px;
@@ -32,6 +43,17 @@
 	align-items: center;
 	justify-content: space-between;
 	cursor: pointer;
+
+	&__titleIcon {
+		display: flex;
+		align-items: center;
+		gap: 0.8rem;
+
+		@media (max-width: 768px) {
+			gap: 0.5rem;
+			margin-right: 0.5rem;
+		}
+	}
 
 	h3 {
 		color: colors.$color-black;
@@ -47,4 +69,14 @@
 		font-weight: 600;
 	}
 	
+}
+
+.icon {
+	min-width: 1.75rem;
+	min-height: 1.75rem;
+	color: colors.$color-red;
+	@media (max-width: 768px) {
+		min-width: 2.1rem;
+		min-height: 2.1rem;
+	}
 }

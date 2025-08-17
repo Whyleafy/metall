@@ -10,7 +10,12 @@
 		justify-content: center;
 		flex-direction: column;
 		gap: 0.8rem;
+		letter-spacing: 1px;
 		
+	}
+
+	@media (max-width: 768px) {
+		padding: 3rem 1rem;
 	}
 }
 

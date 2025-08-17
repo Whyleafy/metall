@@ -68,7 +68,7 @@ export const ReviewSection: React.FC<Props> = ({ className }) => {
         as="link"
         variant="outline"
         onClick={handleClick}
-        href="https://yandex.ru/maps/..."
+        href="https://yandex.ru/maps/org/priyom_i_skupka_metalloloma/14133031537/reviews/?ll=37.602750%2C54.827996&z=12"
       >
         Посмотреть все отзывы
       </Button>

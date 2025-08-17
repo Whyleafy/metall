@@ -18,5 +18,6 @@ export { Select } from './Select/Select';
 export { CategoryWithMetals } from './CategoryWithMetals/CategoryWithMetals';
 export { Accordeon } from './Accordeon/Accordeon';
 export { AnswersSection } from './AnswersSection/AnswersSection';
-
+export { Modal } from './Modal/Modal';
+export { GallerySection } from './GallerySection/GallerySection';
 
