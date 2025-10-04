@@ -7,7 +7,7 @@ export const metals = [
 	{
 		id: 2,
 		name: "Медь (разносортная)",
-		price: 670
+		price: 690
 	},
 	{
 		id: 3,
@@ -22,37 +22,37 @@ export const metals = [
 	{
 		id: 5,
 		name: "Латунь",
-		price: 395
+		price: 420
 	},
 	{
 		id: 6,
 		name: "Радиаторы",
-		price: 390
+		price: 420
 	},
 	{
 		id: 7,
 		name: "Алюминий  I-1 (электротехнический)",
-		price: 165
+		price: 170
 	},
 	{
 		id: 8,
 		name: "Алюминий  I-1 (пищевой, свыше 40л)",
-		price: 155
+		price: 160
 	},
 	{
 		id: 9,
 		name: "Алюминий АД-31 (профильный)",
-		price: 150
+		price: 155
 	},
 	{
 		id: 10,
 		name: "Алюминий VI (моторный)",
-		price: 100
+		price: 106
 	},
 	{
 		id: 11,
 		name: "Алюминий XIV (разносортный)",
-		price: 99
+		price: 105
 	},
 	{
 		id: 12,
