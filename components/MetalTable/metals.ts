@@ -2,32 +2,32 @@ export const metals = [
 	{
 		id: 1,
 		name: "Лом черных металлов",
-		price: 11
+		price: 12
 	},
 	{
 		id: 2,
 		name: "Медь (разносортная)",
-		price: 690
+		price: 710
 	},
 	{
 		id: 3,
 		name: "Медь (луженая)",
-		price: 480
+		price: 485
 	},
 	{
 		id: 4,
 		name: "Медь (колонки)",
-		price: 480
+		price: 485
 	},
 	{
 		id: 5,
 		name: "Латунь",
-		price: 420
+		price: 430
 	},
 	{
 		id: 6,
 		name: "Радиаторы",
-		price: 420
+		price: 430
 	},
 	{
 		id: 7,
