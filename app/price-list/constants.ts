@@ -78,8 +78,8 @@ export const categories = [
     id: "cable",
     name: "Кабель",
     metals: [
-      { id: 1, name: "Кабель медный", price: 180 },
-      { id: 2, name: "Кабель медный луженый", price: 160 },
+      { id: 1, name: "Кабель медный", price: 190 },
+      { id: 2, name: "Кабель медный луженый", price: 170 },
       { id: 3, name: "Кабель алюминиевый", price: 40 },
     ]
   },
