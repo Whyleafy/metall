@@ -2,57 +2,57 @@ export const metals = [
 	{
 		id: 1,
 		name: "Лом черных металлов",
-		price: 13
+		price: 11,5
 	},
 	{
 		id: 2,
 		name: "Медь (разносортная)",
-		price: 710
+		price: 700
 	},
 	{
 		id: 3,
 		name: "Медь (луженая)",
-		price: 485
+		price: 550
 	},
 	{
 		id: 4,
 		name: "Медь (колонки)",
-		price: 485
+		price: 550
 	},
 	{
 		id: 5,
 		name: "Латунь",
-		price: 430
+		price: 400
 	},
 	{
 		id: 6,
 		name: "Радиаторы",
-		price: 430
+		price: 410
 	},
 	{
 		id: 7,
 		name: "Алюминий  I-1 (электротехнический)",
-		price: 170
+		price: 150
 	},
 	{
 		id: 8,
 		name: "Алюминий  I-1 (пищевой, свыше 40л)",
-		price: 160
+		price: 145
 	},
 	{
 		id: 9,
 		name: "Алюминий АД-31 (профильный)",
-		price: 155
+		price: 140
 	},
 	{
 		id: 10,
 		name: "Алюминий VI (моторный)",
-		price: 106
+		price: 101
 	},
 	{
 		id: 11,
 		name: "Алюминий XIV (разносортный)",
-		price: 105
+		price: 100
 	},
 	{
 		id: 12,
@@ -62,12 +62,12 @@ export const metals = [
 	{
 		id: 13,
 		name: "Алюминий (самолётный)",
-		price: 45
+		price: 40
 	},
 	{
 		id: 14,
 		name: "Нержавеющая сталь 8-10%",
-		price: 35
+		price: 30
 	},
 	{
 		id: 15,
@@ -97,7 +97,7 @@ export const metals = [
 	{
 		id: 20,
 		name: "ЗАЗ-блоки",
-		price: 70
+		price: 50
 	},
 	{
 		id: 21,
