@@ -2,12 +2,12 @@ export const metals = [
 	{
 		id: 1,
 		name: "Лом черных металлов",
-		price: 12.5
+		price: 13.5
 	},
 	{
 		id: 2,
 		name: "Медь (разносортная)",
-		price: 740
+		price: 770
 	},
 	{
 		id: 3,
@@ -22,12 +22,12 @@ export const metals = [
 	{
 		id: 5,
 		name: "Латунь",
-		price: 440
+		price: 470
 	},
 	{
 		id: 6,
 		name: "Радиаторы",
-		price: 440
+		price: 470
 	},
 	{
 		id: 7,
@@ -47,12 +47,12 @@ export const metals = [
 	{
 		id: 10,
 		name: "Алюминий VI (моторный)",
-		price: 106
+		price: 121
 	},
 	{
 		id: 11,
 		name: "Алюминий XIV (разносортный)",
-		price: 105
+		price: 120
 	},
 	{
 		id: 12,
