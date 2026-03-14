@@ -7,7 +7,7 @@ export const metals = [
 	{
 		id: 2,
 		name: "Медь (разносортная)",
-		price: 770
+		price: 790
 	},
 	{
 		id: 3,
@@ -22,12 +22,12 @@ export const metals = [
 	{
 		id: 5,
 		name: "Латунь",
-		price: 470
+		price: 480
 	},
 	{
 		id: 6,
 		name: "Радиаторы",
-		price: 470
+		price: 480
 	},
 	{
 		id: 7,
@@ -67,7 +67,7 @@ export const metals = [
 	{
 		id: 14,
 		name: "Нержавеющая сталь 8-10%",
-		price: 30
+		price: 35
 	},
 	{
 		id: 15,
