@@ -2,7 +2,7 @@ export const metals = [
 	{
 		id: 1,
 		name: "Лом черных металлов",
-		price: 14.5
+		price: 15
 	},
 	{
 		id: 2,
